@@ -1,0 +1,44 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	background-color: #fff;
+	margin: 0 0 1.5em;
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-header {
+	margin: 0 60px;
+}
+.entry-content {
+	margin: 0 60px;
+}
+.entry-footer {
+	margin: 0 60px;
+}
+.entry-title {
+	font-size: 4em;
+}
