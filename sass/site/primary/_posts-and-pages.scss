@@ -5,7 +5,10 @@
 .hentry {
 	background-color: #fff;
 	margin: 0 0 1.5em;
-	padding-top: 30px;
+	padding-top: 2em;
+	&.has-post-thumbnail {
+		padding-top: 0;
+	}
 	padding-bottom: 60px;
 }
 
@@ -40,5 +43,13 @@
 	margin: 0 60px;
 }
 .entry-title {
-	font-size: 4em;
+	font-size: 4rem;
+	line-height: 1.25;
+}
+
+.post-thumbnail {
+	max-height: 700px;
+	overflow: hidden;
+	display: block;
+	margin-bottom: 2em;
 }
