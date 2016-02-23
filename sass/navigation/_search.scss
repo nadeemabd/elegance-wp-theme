@@ -5,8 +5,8 @@
 	.search-toggle {
 		transition: color 1s ease-out;
 		&.active {
-			background-color: red;
-			color: white;
+			background-color: $color__navigation-search-bg-hover;
+//			color: white;
 			transition: color 0s ease-out;
 		}
 	}
@@ -50,8 +50,11 @@
 	.search-icon {
 		padding: .6em 1em;
 		cursor: pointer;
+		i {
+			color: $color__navigation-search-text;
+		}
 		&:hover {
-			background-color: red;
+			background-color: $color__navigation-search-bg-hover;
 		}
 	}
 }

@@ -2,7 +2,7 @@
 
 .main-navigation {
 	width: 100%;
-	background-color: yellow;
+//	background-color: yellow;
 	.site-header-wrapper {
 		display: flex;
 		max-width: 90%;
@@ -10,6 +10,7 @@
 		justify-content: space-between;
 		position: relative;
 		flex-flow: row wrap;
+		background-color: $color__navigation-background;
 	}
 	.site-header-menu {
 		order: 3;
@@ -28,14 +29,15 @@
 		position: relative;
 		&:hover > a,
 		&.focus > a {
-			background-color: red;
-			color: yellow;
+			background-color: $color__navigation-link-bg-hover;
+//			color: yellow;
 		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
 		padding: .6em;
+		color: $color__navigation-link-text;
 	}
 }
 .menu-toggle,
@@ -66,7 +68,7 @@
 		ul {
 			display: flex;
 			ul {
-				background-color: blue;
+				background-color: $color__navigation-sublink-bg;
 				position: absolute;
 				z-index: 99999;
 //				display: none;
@@ -86,9 +88,13 @@
 					width: 200px;
 				}
 				:hover > a,
-				.focus > a {}
+				.focus > a {
+					background-color: $color__navigation-sublink-bg-hover;
+				}
 				a:hover,
-				a.focus {}
+				a.focus {
+					background-color: $color__navigation-sublink-bg-hover;
+				}
 			}
 			li:hover > ul,
 			li.focus > ul {
