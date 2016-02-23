@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		## Captions
 		## Galleries
 --------------------------------------------------------------*/
+/* Brand Colors */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -108,11 +109,6 @@ strong {
 
 dfn {
   font-style: italic;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 mark {
@@ -269,8 +265,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #454547;
+  font-family: "Varela Round", Merriweather, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -278,6 +274,9 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-weight: 700;
+  margin: 0;
+  text-rendering: optimizeLegibility;
 }
 
 p {
@@ -362,7 +361,8 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.75em 1.25em;
+  padding: 0;
 }
 
 ul {
@@ -376,7 +376,6 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
 }
 
 dt {
@@ -475,14 +474,14 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #3e3e3e;
+  color: #454547;
   text-decoration: none;
 }
 a:visited {
-  color: #3e3e3e;
+  color: #454547;
 }
 a:hover, a:focus, a:active {
-  color: #ff0000;
+  color: #45CEBE;
 }
 a:focus {
   outline: thin dotted;
@@ -497,7 +496,6 @@ a:hover, a:active {
 /* Styles for mobile menu*/
 .main-navigation {
   width: 100%;
-  background-color: yellow;
 }
 .main-navigation .site-header-wrapper {
   display: -webkit-flex;
@@ -512,6 +510,7 @@ a:hover, a:active {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  background-color: #2A344B;
 }
 .main-navigation .site-header-menu {
   -webkit-order: 3;
@@ -534,13 +533,13 @@ a:hover, a:active {
   position: relative;
 }
 .main-navigation li:hover > a, .main-navigation li.focus > a {
-  background-color: red;
-  color: yellow;
+  background-color: #303B57;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
   padding: .6em;
+  color: #F5F6FA;
 }
 
 .menu-toggle,
@@ -582,7 +581,7 @@ a:hover, a:active {
     display: flex;
   }
   .main-navigation ul ul {
-    background-color: blue;
+    background-color: #303B57;
     position: absolute;
     z-index: 99999;
     -webkit-flex-wrap: wrap;
@@ -603,6 +602,14 @@ a:hover, a:active {
   }
   .main-navigation ul ul a {
     width: 200px;
+  }
+  .main-navigation ul ul :hover > a,
+  .main-navigation ul ul .focus > a {
+    background-color: #3F4D69;
+  }
+  .main-navigation ul ul a:hover,
+  .main-navigation ul ul a.focus {
+    background-color: #3F4D69;
   }
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
@@ -653,8 +660,7 @@ a:hover, a:active {
   transition: color 1s ease-out;
 }
 .search-container-wrapper .search-toggle.active {
-  background-color: red;
-  color: white;
+  background-color: #3F4D69;
   transition: color 0s ease-out;
 }
 
@@ -705,10 +711,27 @@ a:hover, a:active {
   padding: .6em 1em;
   cursor: pointer;
 }
+.search-toggle .search-icon i {
+  color: #F5F6FA;
+}
 .search-toggle .search-icon:hover {
-  background-color: red;
+  background-color: #3F4D69;
 }
 
+/*--------------------------------------------------------------
+# Branding
+--------------------------------------------------------------*/
+.site-branding {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 1600px) {
+  .site-branding {
+    max-width: 80%;
+  }
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -797,8 +820,11 @@ a:hover, a:active {
 .hentry {
   background-color: #fff;
   margin: 0 0 1.5em;
-  padding-top: 30px;
+  padding-top: 2em;
   padding-bottom: 60px;
+}
+.hentry.has-post-thumbnail {
+  padding-top: 0;
 }
 
 .byline,
@@ -835,7 +861,15 @@ a:hover, a:active {
 }
 
 .entry-title {
-  font-size: 4em;
+  font-size: 4rem;
+  line-height: 1.25;
+}
+
+.post-thumbnail {
+  max-height: 700px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 2em;
 }
 
 /*--------------------------------------------------------------
