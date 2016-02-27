@@ -4,12 +4,13 @@
 
 .hentry {
 	background-color: #fff;
-	margin: 0 0 1.5em;
-	padding-top: 2em;
+	margin: 0 0 4em;
+	padding-top: 3.75em;
+	padding-bottom: 3.75em;
+	box-shadow: 0 50px 60px rgba(0, 0, 0, .7);
 	&.has-post-thumbnail {
 		padding-top: 0;
 	}
-	padding-bottom: 60px;
 }
 
 .byline,
@@ -33,18 +34,18 @@
 	margin: 0 0 1.5em;
 }
 
-.entry-header {
-	margin: 0 60px;
+.entry-header, .entry-content, .entry-footer {
+	margin: 0 3.75em;
 }
 .entry-content {
-	margin: 0 60px;
+//	margin: 0 60px;
 }
 .entry-footer {
-	margin: 0 60px;
+//	margin: 0 60px;
 }
 .entry-title {
-	font-size: 4rem;
-	line-height: 1.25;
+//	font-size: 4rem;
+//	line-height: 1.25;
 }
 
 .post-thumbnail {
