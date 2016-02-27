@@ -277,6 +277,37 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin: 0;
   text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 64px;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 48px;
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+h6 {
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 p {
@@ -342,7 +373,7 @@ html {
 }
 
 body {
-  background: #f1f1f1;
+  background: #2A344B;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -510,7 +541,6 @@ a:hover, a:active {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  background-color: #2A344B;
 }
 .main-navigation .site-header-menu {
   -webkit-order: 3;
@@ -726,6 +756,9 @@ a:hover, a:active {
   margin: 0 auto;
   text-align: center;
 }
+.site-branding .site-title a, .site-branding p {
+  color: #fff;
+}
 
 @media screen and (min-width: 1600px) {
   .site-branding {
@@ -744,7 +777,7 @@ a:hover, a:active {
   overflow: hidden;
 }
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
+  background-color: #2A344B;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
@@ -793,10 +826,14 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 3.75em;
   background-color: #fff;
-  padding: 15px;
+  padding: 30px;
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
   /* Make sure select elements fit in widgets. */
+}
+.widget .widget-title {
+  font-size: 1.5rem;
 }
 .widget select {
   max-width: 100%;
@@ -819,9 +856,10 @@ a:hover, a:active {
 
 .hentry {
   background-color: #fff;
-  margin: 0 0 1.5em;
-  padding-top: 2em;
-  padding-bottom: 60px;
+  margin: 0 0 4em;
+  padding-top: 3.75em;
+  padding-bottom: 3.75em;
+  box-shadow: 0 50px 60px rgba(0, 0, 0, 0.7);
 }
 .hentry.has-post-thumbnail {
   padding-top: 0;
@@ -848,21 +886,8 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
-.entry-header {
-  margin: 0 60px;
-}
-
-.entry-content {
-  margin: 0 60px;
-}
-
-.entry-footer {
-  margin: 0 60px;
-}
-
-.entry-title {
-  font-size: 4rem;
-  line-height: 1.25;
+.entry-header, .entry-content, .entry-footer {
+  margin: 0 3.75em;
 }
 
 .post-thumbnail {
