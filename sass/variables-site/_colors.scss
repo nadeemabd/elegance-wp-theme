@@ -10,8 +10,8 @@ $brand-color-6:					#F5F6FA !default; // Base Grey
 $light:									#fff !default; // white
 $dark:									#000 !default; // black
 
-$color__background-body: #f1f1f1;
-$color__background-screen: #f1f1f1;
+$color__background-body: $brand-color-1;
+$color__background-screen: $brand-color-1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
