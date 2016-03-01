@@ -111,10 +111,54 @@ function elegance_widgets_init() {
 }
 add_action( 'widgets_init', 'elegance_widgets_init' );
 
+if ( ! function_exists( 'elegance_fonts_url' ) ) :
+/**
+ * Register Google fonts for Elegance.
+ *
+ * Create your own elegance_fonts_url() function to override in a child theme.
+ *
+ * @since Elegance 1.0
+ *
+ * @return string Google fonts URL for the theme.
+ */
+function elegance_fonts_url() {
+	$fonts_url = '';
+	$fonts     = array();
+	$subsets   = 'latin,latin-ext';
+
+//	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Titillium font: on or off', 'elegance' ) ) {
+		$fonts[] = 'Titillium Web:400,700,900,400italic,700italic,900italic';
+	}
+
+	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'elegance' ) ) {
+		$fonts[] = 'Montserrat:400,700';
+	}
+
+	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'elegance' ) ) {
+		$fonts[] = 'Inconsolata:400';
+	}
+
+	if ( $fonts ) {
+		$fonts_url = add_query_arg( array(
+			'family' => urlencode( implode( '|', $fonts ) ),
+			'subset' => urlencode( $subsets ),
+		), 'https://fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+}
+endif;
+
 /**
  * Enqueue scripts and styles.
  */
 function elegance_scripts() {
+	// Add custom fonts, used in the main stylesheet.
+	wp_enqueue_style( 'elegance-fonts', elegance_fonts_url(), array(), null );
+
 	wp_enqueue_style('oneforth-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 
 	wp_enqueue_style( 'elegance-style', get_stylesheet_uri() );

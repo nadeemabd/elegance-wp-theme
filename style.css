@@ -42,11 +42,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		## Captions
 		## Galleries
 --------------------------------------------------------------*/
+/* Brand Colors */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 html {
   font-family: sans-serif;
+  font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -108,11 +110,6 @@ strong {
 
 dfn {
   font-style: italic;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 mark {
@@ -258,7 +255,7 @@ table {
 
 td,
 th {
-  padding: 0;
+  padding: 0.5em;
 }
 
 /*--------------------------------------------------------------
@@ -269,19 +266,99 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #454547;
+  font-family: "Titillium Web", Montserrat, sans-serif;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1.5;
+}
+@media screen and (min-width: 37.5em) {
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-weight: 400;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 64px;
+  font-size: 6.4rem;
+}
+@media screen and (min-width: 37.5em) {
+  h1 {
+    font-size: 72px;
+    font-size: 7.2rem;
+  }
+}
+
+h2 {
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+@media screen and (min-width: 37.5em) {
+  h2 {
+    font-size: 54px;
+    font-size: 5.4rem;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+@media screen and (min-width: 37.5em) {
+  h3 {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+@media screen and (min-width: 37.5em) {
+  h4 {
+    font-size: 22.5px;
+    font-size: 2.25rem;
+  }
+}
+
+h5 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 37.5em) {
+  h5 {
+    font-size: 15.75px;
+    font-size: 1.575rem;
+  }
+}
+
+h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 37.5em) {
+  h6 {
+    font-size: 13.5px;
+    font-size: 1.35rem;
+  }
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em;
 }
 
 dfn, cite, em, i {
@@ -289,7 +366,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-  margin: 0 1.5em;
+  margin: 0;
 }
 
 address {
@@ -300,18 +377,30 @@ pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
   padding: 1.6em;
 }
+@media screen and (min-width: 37.5em) {
+  pre {
+    font-size: 16.875px;
+    font-size: 1.6875rem;
+  }
+}
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 37.5em) {
+  code, kbd, tt, var {
+    font-size: 16.875px;
+    font-size: 1.6875rem;
+  }
 }
 
 abbr, acronym {
@@ -343,15 +432,33 @@ html {
 }
 
 body {
-  background: #f1f1f1;
+  background: #2A344B;
   /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote, q {
-  quotes: "" "";
+  quotes: none;
 }
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
+}
+
+blockquote {
+  font-size: 21.28px;
+  font-size: 2.128rem;
+  color: #888;
+  padding-left: 1.5em;
+  letter-spacing: -.014em;
+  margin-bottom: 1.5em;
+}
+@media screen and (min-width: 37.5em) {
+  blockquote {
+    font-size: 23.94px;
+    font-size: 2.394rem;
+  }
+}
+blockquote > :last-child {
+  margin-bottom: 0;
 }
 
 hr {
@@ -362,7 +469,8 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.75em 1.25em;
+  padding: 0;
 }
 
 ul {
@@ -376,7 +484,6 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
 }
 
 dt {
@@ -398,6 +505,9 @@ table {
   margin: 0 0 1.5em;
   width: 100%;
 }
+table th, table td {
+  border: 1px solid #eee;
+}
 
 /*--------------------------------------------------------------
 # Forms
@@ -413,10 +523,19 @@ input[type="submit"] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   line-height: 1;
   padding: .6em 1em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 37.5em) {
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    font-size: 13.5px;
+    font-size: 1.35rem;
+  }
 }
 button:hover,
 input[type="button"]:hover,
@@ -475,14 +594,14 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #3e3e3e;
+  color: #454547;
   text-decoration: none;
 }
 a:visited {
-  color: #3e3e3e;
+  color: #454547;
 }
 a:hover, a:focus, a:active {
-  color: #ff0000;
+  color: #45CEBE;
 }
 a:focus {
   outline: thin dotted;
@@ -497,7 +616,6 @@ a:hover, a:active {
 /* Styles for mobile menu*/
 .main-navigation {
   width: 100%;
-  background-color: yellow;
 }
 .main-navigation .site-header-wrapper {
   display: -webkit-flex;
@@ -534,13 +652,13 @@ a:hover, a:active {
   position: relative;
 }
 .main-navigation li:hover > a, .main-navigation li.focus > a {
-  background-color: red;
-  color: yellow;
+  background-color: #303B57;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
   padding: .6em;
+  color: #F5F6FA;
 }
 
 .menu-toggle,
@@ -582,7 +700,7 @@ a:hover, a:active {
     display: flex;
   }
   .main-navigation ul ul {
-    background-color: blue;
+    background-color: #303B57;
     position: absolute;
     z-index: 99999;
     -webkit-flex-wrap: wrap;
@@ -603,6 +721,14 @@ a:hover, a:active {
   }
   .main-navigation ul ul a {
     width: 200px;
+  }
+  .main-navigation ul ul :hover > a,
+  .main-navigation ul ul .focus > a {
+    background-color: #3F4D69;
+  }
+  .main-navigation ul ul a:hover,
+  .main-navigation ul ul a.focus {
+    background-color: #3F4D69;
   }
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
@@ -653,8 +779,7 @@ a:hover, a:active {
   transition: color 1s ease-out;
 }
 .search-container-wrapper .search-toggle.active {
-  background-color: red;
-  color: white;
+  background-color: #3F4D69;
   transition: color 0s ease-out;
 }
 
@@ -705,10 +830,30 @@ a:hover, a:active {
   padding: .6em 1em;
   cursor: pointer;
 }
+.search-toggle .search-icon i {
+  color: #F5F6FA;
+}
 .search-toggle .search-icon:hover {
-  background-color: red;
+  background-color: #3F4D69;
 }
 
+/*--------------------------------------------------------------
+# Branding
+--------------------------------------------------------------*/
+.site-branding {
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.site-branding .site-title a, .site-branding p {
+  color: #fff;
+}
+
+@media screen and (min-width: 1600px) {
+  .site-branding {
+    max-width: 80%;
+  }
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -721,14 +866,14 @@ a:hover, a:active {
   overflow: hidden;
 }
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
+  background-color: #2A344B;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;
   display: block;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   font-weight: bold;
   height: auto;
   left: 5px;
@@ -739,6 +884,12 @@ a:hover, a:active {
   width: auto;
   z-index: 100000;
   /* Above WP toolbar. */
+}
+@media screen and (min-width: 37.5em) {
+  .screen-reader-text:focus {
+    font-size: 15.75px;
+    font-size: 1.575rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -770,15 +921,53 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 3.75em;
   background-color: #fff;
-  padding: 15px;
+  padding: 1.5em;
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
+  font-size: 14.08px;
+  font-size: 1.408rem;
   /* Make sure select elements fit in widgets. */
+}
+@media screen and (min-width: 37.5em) {
+  .widget {
+    font-size: 15.84px;
+    font-size: 1.584rem;
+  }
+}
+.widget .widget-title {
+  font-size: 2.7rem;
 }
 .widget select {
   max-width: 100%;
 }
+.widget ul, .widget ol {
+  list-style: none;
+  margin: 0;
+}
+.widget ul li, .widget ol li {
+  line-height: 2em;
+}
+.widget ul ul > li, .widget ul ol > li, .widget ol ul > li, .widget ol ol > li {
+  padding: 0 0 0 .8em;
+  border-left: 1px solid #e3e3e3;
+  position: relative;
+}
+.widget ul ul > li:hover a:before, .widget ul ol > li:hover a:before, .widget ol ul > li:hover a:before, .widget ol ol > li:hover a:before {
+  content: "";
+  background-color: #45CEBE;
+  width: 1px;
+  height: 2em;
+  right: 100%;
+  top: 0;
+  position: absolute;
+}
 
+@media screen and (min-width: 90em) {
+  .widget {
+    padding: 2em;
+  }
+}
 /* Search widget. */
 .widget_search .search-submit {
   display: none;
@@ -796,9 +985,13 @@ a:hover, a:active {
 
 .hentry {
   background-color: #fff;
-  margin: 0 0 1.5em;
-  padding-top: 30px;
-  padding-bottom: 60px;
+  margin: 0 0 4em;
+  padding-top: 3.75em;
+  padding-bottom: 3.75em;
+  box-shadow: 0 50px 60px rgba(0, 0, 0, 0.7);
+}
+.hentry.has-post-thumbnail {
+  padding-top: 0;
 }
 
 .byline,
@@ -822,20 +1015,25 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
-.entry-header {
-  margin: 0 60px;
+.entry-header, .entry-content, .entry-footer {
+  margin: 0 3.75em;
 }
 
-.entry-content {
-  margin: 0 60px;
+.entry-content a {
+  color: #45CEBE;
+  border-bottom: 1px dotted;
+  border-bottom-color: #45CEBE;
+}
+.entry-content a:hover, .entry-content a:focus, .entry-content a:active {
+  color: #3F4D69;
+  border-bottom-color: #3F4D69;
 }
 
-.entry-footer {
-  margin: 0 60px;
-}
-
-.entry-title {
-  font-size: 4em;
+.post-thumbnail {
+  max-height: 700px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 2em;
 }
 
 /*--------------------------------------------------------------
@@ -976,11 +1174,11 @@ object {
   }
 
   .content-area {
-    width: calc(75% - 1em);
+    width: calc(75% - 2em);
   }
 
   .site-content .widget-area {
-    width: calc(25% - 1em);
+    width: calc(25% - 0em);
   }
 }
 @media screen and (min-width: 1600px) {

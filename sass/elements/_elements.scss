@@ -13,11 +13,26 @@ body {
 }
 
 blockquote, q {
-	quotes: "" "";
+	quotes: none;
 
 	&:before,
 	&:after {
 		content: "";
+	}
+}
+
+blockquote {
+//	margin: 0 1.5em;
+	@include font-size(1.33);
+//	font-style: italic;
+	color: #888;
+//	border-left: 4px solid;
+	padding-left: 1.5em;
+//	margin-left: -1.5em;
+	letter-spacing: -.014em;
+	margin-bottom: 1.5em;
+	> :last-child {
+		margin-bottom: 0
 	}
 }
 

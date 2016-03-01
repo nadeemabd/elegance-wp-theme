@@ -4,9 +4,13 @@
 
 .hentry {
 	background-color: #fff;
-	margin: 0 0 1.5em;
-	padding-top: 30px;
-	padding-bottom: 60px;
+	margin: 0 0 4em;
+	padding-top: 3.75em;
+	padding-bottom: 3.75em;
+	box-shadow: 0 50px 60px rgba(0, 0, 0, .7);
+	&.has-post-thumbnail {
+		padding-top: 0;
+	}
 }
 
 .byline,
@@ -30,15 +34,35 @@
 	margin: 0 0 1.5em;
 }
 
-.entry-header {
-	margin: 0 60px;
+.entry-header, .entry-content, .entry-footer {
+	margin: 0 3.75em;
 }
 .entry-content {
-	margin: 0 60px;
+//	margin: 0 60px;
+	a {
+		color: $brand-color-4;
+		border-bottom: 1px dotted;
+		border-bottom-color: $brand-color-4;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $brand-color-3;
+			border-bottom-color: $brand-color-3;
+		}
+	}
 }
 .entry-footer {
-	margin: 0 60px;
+//	margin: 0 60px;
 }
 .entry-title {
-	font-size: 4em;
+//	font-size: 4rem;
+//	line-height: 1.25;
 }
+
+.post-thumbnail {
+	max-height: 700px;
+	overflow: hidden;
+	display: block;
+	margin-bottom: 2em;
+}
+

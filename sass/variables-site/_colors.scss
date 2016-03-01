@@ -1,5 +1,17 @@
-$color__background-body: #f1f1f1;
-$color__background-screen: #f1f1f1;
+/* Brand Colors */
+
+$brand-color-1:					#2A344B !default; // Base Blue
+$brand-color-2:					#303B57 !default; // Base Blue Light
+$brand-color-3:					#3F4D69 !default; // Base Blue Lighter
+$brand-color-4:					#45CEBE !default; // Accent Teal
+$brand-color-5:					#454547 !default; // Base Grey Dark
+$brand-color-6:					#F5F6FA !default; // Base Grey
+
+$light:									#fff !default; // white
+$dark:									#000 !default; // black
+
+$color__background-body: $brand-color-1;
+$color__background-screen: $brand-color-1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
@@ -8,13 +20,35 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #3e3e3e;
-$color__link-visited: #3e3e3e;
-$color__link-hover: #ff0000;
-$color__text-main: #404040;
+$color__link: $brand-color-5;
+$color__link-visited: $brand-color-5;
+$color__link-hover: $brand-color-4;
+$color__text-main: $brand-color-5;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+// Navigation Bar Background Color
+$color__navigation-background:	 $brand-color-1;
+
+// Navigation Main Menu Colors
+$color__navigation-link-bg: $brand-color-2;
+$color__navigation-link-bg-hover: $brand-color-2;
+$color__navigation-link-text:			$brand-color-6;
+$color__navigation-link-text-hover: $light;
+
+// Navigation Sub Menu Colors
+$color__navigation-sublink-bg: 				$brand-color-2;
+$color__navigation-sublink-bg-hover: 	$brand-color-3;
+$color__navigation-sublink-text:			$brand-color-6;
+$color__navigation-sublink-text-hover: $light;
+
+// Navigation Search Button Colors
+$color__navigation-search-bg: 				$brand-color-2;
+$color__navigation-search-bg-hover: 	$brand-color-3;
+$color__navigation-search-bg-active: 	$brand-color-3;
+$color__navigation-search-text:			$brand-color-6;
+$color__navigation-search-text-hover: $light;
