@@ -126,20 +126,15 @@ function elegance_fonts_url() {
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
 
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Varela Round font: on or off', 'elegance' ) ) {
-		$fonts[] = 'Varela+Round:400';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'elegance' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
-	}
-
 //	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-//	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'elegance' ) ) {
-//		$fonts[] = 'Montserrat:400,700';
-//	}
+	if ( 'off' !== _x( 'on', 'Titillium font: on or off', 'elegance' ) ) {
+		$fonts[] = 'Titillium Web:400,700,900,400italic,700italic,900italic';
+	}
+
+	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'elegance' ) ) {
+		$fonts[] = 'Montserrat:400,700';
+	}
 
 	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'elegance' ) ) {
