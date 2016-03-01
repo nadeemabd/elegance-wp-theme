@@ -953,7 +953,7 @@ a:hover, a:active {
   border-left: 1px solid #e3e3e3;
   position: relative;
 }
-.widget ul ul > li:hover a:before, .widget ul ol > li:hover a:before, .widget ol ul > li:hover a:before, .widget ol ol > li:hover a:before {
+.widget ul ul > li:hover:before, .widget ul ol > li:hover:before, .widget ol ul > li:hover:before, .widget ol ol > li:hover:before {
   content: "";
   background-color: #45CEBE;
   width: 1px;
