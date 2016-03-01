@@ -1,16 +1,57 @@
 .widget {
 	margin: 0 0 3.75em;
 	background-color: #fff;
-	padding: 30px;
+	padding: 1.5em;
 	box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
-
+	@include font-size(.88);
 	.widget-title {
-		font-size: 1.5rem;
+		font-size: 2.7rem;
 	}
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
+	}
+
+	ul, ol {
+		list-style: none;
+		margin: 0;
+		li {
+//			margin-bottom: .5em;
+//			border-bottom: 1px solid #9e9e9e;
+			line-height: 2em;
+		}
+
+		ul, ol {
+			> li {
+				padding: 0 0 0 .8em;
+				border-left: 1px solid #e3e3e3;
+				position: relative;
+				&:hover {
+					a {
+						&:before {
+							content: "";
+							background-color: $brand-color-4;
+							width: 1px;
+							height: 2em;
+							right: 100%;
+							top: 0;
+							position: absolute;
+						}
+					}
+				}
+			}
+		}
+	}
+
+//	.children > li {
+//		border-left: 1px solid #9e9e9e;
+//	}
+}
+
+@media screen and (min-width: 90em) {
+	.widget {
+		padding: 2em;
 	}
 }
 
