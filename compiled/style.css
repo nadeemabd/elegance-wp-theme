@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 html {
   font-family: sans-serif;
+  font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -254,7 +255,7 @@ table {
 
 td,
 th {
-  padding: 0;
+  padding: 0.5em;
 }
 
 /*--------------------------------------------------------------
@@ -266,15 +267,25 @@ input,
 select,
 textarea {
   color: #454547;
-  font-family: "Varela Round", Merriweather, sans-serif;
+  font-family: "Titillium Web", Montserrat, sans-serif;
   font-size: 16px;
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1.5;
+}
+@media screen and (min-width: 37.5em) {
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-weight: 700;
+  font-weight: 400;
   margin: 0;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
@@ -282,36 +293,72 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 64px;
-  font-size: 4rem;
+  font-size: 6.4rem;
+}
+@media screen and (min-width: 37.5em) {
+  h1 {
+    font-size: 72px;
+    font-size: 7.2rem;
+  }
 }
 
 h2 {
   font-size: 48px;
-  font-size: 3rem;
+  font-size: 4.8rem;
+}
+@media screen and (min-width: 37.5em) {
+  h2 {
+    font-size: 54px;
+    font-size: 5.4rem;
+  }
 }
 
 h3 {
   font-size: 32px;
-  font-size: 2rem;
+  font-size: 3.2rem;
+}
+@media screen and (min-width: 37.5em) {
+  h3 {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
 }
 
 h4 {
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 37.5em) {
+  h4 {
+    font-size: 22.5px;
+    font-size: 2.25rem;
+  }
 }
 
 h5 {
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 37.5em) {
+  h5 {
+    font-size: 15.75px;
+    font-size: 1.575rem;
+  }
 }
 
 h6 {
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 37.5em) {
+  h6 {
+    font-size: 13.5px;
+    font-size: 1.35rem;
+  }
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em;
 }
 
 dfn, cite, em, i {
@@ -319,7 +366,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-  margin: 0 1.5em;
+  margin: 0;
 }
 
 address {
@@ -330,18 +377,30 @@ pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
   padding: 1.6em;
 }
+@media screen and (min-width: 37.5em) {
+  pre {
+    font-size: 16.875px;
+    font-size: 1.6875rem;
+  }
+}
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 37.5em) {
+  code, kbd, tt, var {
+    font-size: 16.875px;
+    font-size: 1.6875rem;
+  }
 }
 
 abbr, acronym {
@@ -378,10 +437,28 @@ body {
 }
 
 blockquote, q {
-  quotes: "" "";
+  quotes: none;
 }
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
+}
+
+blockquote {
+  font-size: 21.28px;
+  font-size: 2.128rem;
+  color: #888;
+  padding-left: 1.5em;
+  letter-spacing: -.014em;
+  margin-bottom: 1.5em;
+}
+@media screen and (min-width: 37.5em) {
+  blockquote {
+    font-size: 23.94px;
+    font-size: 2.394rem;
+  }
+}
+blockquote > :last-child {
+  margin-bottom: 0;
 }
 
 hr {
@@ -428,6 +505,9 @@ table {
   margin: 0 0 1.5em;
   width: 100%;
 }
+table th, table td {
+  border: 1px solid #eee;
+}
 
 /*--------------------------------------------------------------
 # Forms
@@ -443,10 +523,19 @@ input[type="submit"] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   line-height: 1;
   padding: .6em 1em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 37.5em) {
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    font-size: 13.5px;
+    font-size: 1.35rem;
+  }
 }
 button:hover,
 input[type="button"]:hover,
@@ -744,7 +833,7 @@ a:hover, a:active {
   color: #21759b;
   display: block;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   font-weight: bold;
   height: auto;
   left: 5px;
@@ -755,6 +844,12 @@ a:hover, a:active {
   width: auto;
   z-index: 100000;
   /* Above WP toolbar. */
+}
+@media screen and (min-width: 37.5em) {
+  .screen-reader-text:focus {
+    font-size: 15.75px;
+    font-size: 1.575rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -788,17 +883,51 @@ a:hover, a:active {
 .widget {
   margin: 0 0 3.75em;
   background-color: #fff;
-  padding: 30px;
+  padding: 1.5em;
   box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
+  font-size: 14.08px;
+  font-size: 1.408rem;
   /* Make sure select elements fit in widgets. */
 }
+@media screen and (min-width: 37.5em) {
+  .widget {
+    font-size: 15.84px;
+    font-size: 1.584rem;
+  }
+}
 .widget .widget-title {
-  font-size: 1.5rem;
+  font-size: 2.7rem;
 }
 .widget select {
   max-width: 100%;
 }
+.widget ul, .widget ol {
+  list-style: none;
+  margin: 0;
+}
+.widget ul li, .widget ol li {
+  line-height: 2em;
+}
+.widget ul ul > li, .widget ul ol > li, .widget ol ul > li, .widget ol ol > li {
+  padding: 0 0 0 .8em;
+  border-left: 1px solid #e3e3e3;
+  position: relative;
+}
+.widget ul ul > li:hover a:before, .widget ul ol > li:hover a:before, .widget ol ul > li:hover a:before, .widget ol ol > li:hover a:before {
+  content: "";
+  background-color: #45CEBE;
+  width: 1px;
+  height: 2em;
+  right: 100%;
+  top: 0;
+  position: absolute;
+}
 
+@media screen and (min-width: 90em) {
+  .widget {
+    padding: 2em;
+  }
+}
 /* Search widget. */
 .widget_search .search-submit {
   display: none;
@@ -848,6 +977,16 @@ a:hover, a:active {
 
 .entry-header, .entry-content, .entry-footer {
   margin: 0 3.75em;
+}
+
+.entry-content a {
+  color: #45CEBE;
+  border-bottom: 1px dotted;
+  border-bottom-color: #45CEBE;
+}
+.entry-content a:hover, .entry-content a:focus, .entry-content a:active {
+  color: #3F4D69;
+  border-bottom-color: #3F4D69;
 }
 
 .post-thumbnail {
@@ -991,11 +1130,11 @@ object {
   }
 
   .content-area {
-    width: calc(75% - 1em);
+    width: calc(75% - 2em);
   }
 
   .site-content .widget-area {
-    width: calc(25% - 1em);
+    width: calc(25% - 0em);
   }
 }
 @media screen and (min-width: 1600px) {
