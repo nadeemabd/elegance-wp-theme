@@ -39,6 +39,17 @@
 }
 .entry-content {
 //	margin: 0 60px;
+	a {
+		color: $brand-color-4;
+		border-bottom: 1px dotted;
+		border-bottom-color: $brand-color-4;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $brand-color-3;
+			border-bottom-color: $brand-color-3;
+		}
+	}
 }
 .entry-footer {
 //	margin: 0 60px;
@@ -54,3 +65,4 @@
 	display: block;
 	margin-bottom: 2em;
 }
+
