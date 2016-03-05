@@ -25,7 +25,7 @@ function elegance_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'elegance' ),
+		esc_html_x( 'Published on %s', 'post date', 'elegance' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -47,15 +47,15 @@ function elegance_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'elegance' ) );
-		if ( $categories_list && elegance_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'elegance' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+//		$categories_list = get_the_category_list( esc_html__( ', ', 'elegance' ) );
+//		if ( $categories_list && elegance_categorized_blog() ) {
+//			printf( '<span class="cat-links"><i class="fa fa-folder-open"></i>' . esc_html__( ' %1$s', 'elegance' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+//		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'elegance' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'elegance' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links"><i class="fa fa-hashtag"></i>' . esc_html__( ' %1$s', 'elegance' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
