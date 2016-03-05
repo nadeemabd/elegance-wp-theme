@@ -563,7 +563,16 @@ input[type="search"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  width: 100%;
+}
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+textarea:hover {
+  color: #000;
+  border-color: #697da5;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -571,7 +580,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  color: #111;
+  border-color: #45CEBE;
 }
 
 input[type="text"],
@@ -584,7 +593,6 @@ input[type="search"] {
 
 textarea {
   padding-left: 3px;
-  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -923,11 +931,13 @@ a:hover, a:active {
 .widget {
   margin: 0 0 3.75em;
   background-color: #fff;
-  padding: 1.5em;
+  padding: 24px;
   box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
+  color: #7e7e7e;
   font-size: 14.08px;
   font-size: 1.408rem;
   /* Make sure select elements fit in widgets. */
+  /* Search widget. */
 }
 @media screen and (min-width: 37.5em) {
   .widget {
@@ -937,42 +947,116 @@ a:hover, a:active {
 }
 .widget .widget-title {
   font-size: 2.7rem;
+  color: #45CEBE;
+  position: relative;
+  margin-bottom: 8px;
+  margin-top: -24px;
+  padding: 8px 0;
+  border-top: 5px solid;
 }
 .widget select {
   max-width: 100%;
 }
-.widget ul, .widget ol {
+.widget ul {
   list-style: none;
+}
+.widget ol > li {
+  padding: 0 0 0 8px;
+  margin-left: 16px;
+}
+.widget ul, .widget ol {
   margin: 0;
 }
 .widget ul li, .widget ol li {
-  line-height: 2em;
-}
-.widget ul ul > li, .widget ul ol > li, .widget ol ul > li, .widget ol ol > li {
-  padding: 0 0 0 .8em;
-  border-left: 1px solid #e3e3e3;
+  line-height: 2;
   position: relative;
 }
-.widget ul ul > li:hover:before, .widget ul ol > li:hover:before, .widget ol ul > li:hover:before, .widget ol ol > li:hover:before {
+.widget ul ul > li, .widget ol ul > li {
+  padding: 0 0 0 .8em;
+}
+.widget ul ul > li::before, .widget ol ul > li::before {
+  content: "";
+  width: 2px;
+  height: 2em;
+  position: absolute;
+  background-color: #e3e3e3;
+  left: 0;
+}
+.widget ul ul > li:hover:before, .widget ol ul > li:hover:before {
   content: "";
   background-color: #45CEBE;
-  width: 1px;
+  width: 2px;
   height: 2em;
   right: 100%;
   top: 0;
   position: absolute;
 }
+.widget_calendar caption {
+  text-align: left;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  border-left: 2px solid;
+  border-color: #ccc;
+  padding-left: 8px;
+}
+.widget_calendar td, .widget_calendar th {
+  text-align: center;
+}
+.widget_rss li {
+  margin-bottom: 15px;
+}
+.widget_rss li a {
+  border-left: 2px solid;
+  border-color: #ccc;
+  padding-left: 10px;
+}
+.widget_rss li a:hover {
+  border-color: #45CEBE;
+}
+.widget_rss .rsswidget {
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1.2;
+}
+.widget_rss .rss-date {
+  display: block;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+.widget_rss .rssSummary {
+  line-height: 1.5;
+}
+.widget_search .search-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.widget_search .search-form label {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.tagcloud a {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 4px;
+  margin: 2px 0;
+}
+.tagcloud a:hover {
+  border-color: #45CEBE;
+  background-color: #45CEBE;
+  color: #fff;
+}
 
 @media screen and (min-width: 90em) {
   .widget {
-    padding: 2em;
+    padding: 32px;
+  }
+  .widget .widget-title {
+    margin-top: -32px;
   }
 }
-/* Search widget. */
-.widget_search .search-submit {
-  display: none;
-}
-
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/

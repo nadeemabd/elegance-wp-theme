@@ -1,11 +1,30 @@
 .widget {
 	margin: 0 0 3.75em;
 	background-color: #fff;
-	padding: 1.5em;
+	padding: 24px;
 	box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
+	color: #7e7e7e;
 	@include font-size(.88);
 	.widget-title {
 		font-size: 2.7rem;
+		color: $brand-color-4;
+		position: relative;
+		margin-bottom: 8px;
+		margin-top: -24px;
+		padding: 8px 0;
+		border-top: 5px solid;
+
+		// For custom border
+//		&:before {
+//			content: "";
+//			width: 100%;
+//			height: 5px;
+//			position: absolute;
+//			background-color: #45CEBE;
+//			bottom: 100%;
+//			left: 0;
+//		}
+
 	}
 
 	/* Make sure select elements fit in widgets. */
@@ -13,26 +32,49 @@
 		max-width: 100%;
 	}
 
-	ul, ol {
+	ul {
 		list-style: none;
+	}
+
+	ol {
+		> li {
+			padding: 0 0 0 8px;
+			margin-left: 16px;
+		}
+	}
+	ul, ol {
 		margin: 0;
 		li {
 //			margin-bottom: .5em;
 //			border-bottom: 1px solid #9e9e9e;
-			line-height: 2em;
+			line-height: 2;
+			position: relative;
 		}
 
-		ul, ol {
+		ul {
 			> li {
 				padding: 0 0 0 .8em;
-				border-left: 1px solid #e3e3e3;
-				position: relative;
+			}
+		}
+
+		ul {
+			> li {
+				&::before {
+//				border-left: 2px solid #e3e3e3;
+
+					content: "";
+					width: 2px;
+					height: 2em;
+					position: absolute;
+					background-color: #e3e3e3;
+					left: 0;
+				}
 				&:hover {
 //					a {
 						&:before {
 							content: "";
 							background-color: $brand-color-4;
-							width: 1px;
+							width: 2px;
 							height: 2em;
 							right: 100%;
 							top: 0;
@@ -47,15 +89,87 @@
 //	.children > li {
 //		border-left: 1px solid #9e9e9e;
 //	}
+
+	&_calendar {
+		caption {
+			text-align: left;
+			margin-bottom: 8px;
+			text-transform: uppercase;
+			border-left: 2px solid;
+			border-color: $color__border-input;
+			padding-left: 8px;
+		}
+		td, th {
+			text-align: center;
+		}
+	}
+
+	&_rss {
+		li {
+			margin-bottom: 15px;
+			a {
+				border-left: 2px solid;
+				border-color: #ccc;
+				padding-left: 10px;
+				&:hover {
+					border-color: #45CEBE;
+				}
+			}
+		}
+		.rsswidget {
+			font-weight: 700;
+			display: inline-block;
+			line-height: 1.2;
+		}
+		.rss-date {
+			display: block;
+			line-height: 1.2;
+			font-size: 1.2rem;
+		}
+		.rssSummary {
+			line-height: 1.5;
+		}
+	}
+	&_text {
+//		strong {
+//			color: $brand-color-5;
+//		}
+	}
+
+	&_recent_comments {
+		a {
+//			display: inline-block;
+//			line-height: 1.5;
+		}
+	}
+	/* Search widget. */
+	&_search {
+		.search-form {
+			display: flex;
+			label {
+				flex: 1 0 auto;
+			}
+		}
+	}
+}
+
+.tagcloud a {
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 4px;
+	margin: 2px 0;
+	&:hover {
+		border-color: $brand-color-4;
+		background-color: $brand-color-4;
+		color: $light;
+	}
 }
 
 @media screen and (min-width: 90em) {
 	.widget {
-		padding: 2em;
+		padding: 32px;
+		.widget-title {
+			margin-top: -32px;
+		}
 	}
-}
-
-/* Search widget. */
-.widget_search .search-submit {
-	display: none;
 }
