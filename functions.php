@@ -42,6 +42,7 @@ function elegance_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1280, 9999 );
+	add_image_size( 'elegance-hero-image', 2000, 1500, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -159,7 +160,7 @@ function elegance_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'elegance-fonts', elegance_fonts_url(), array(), null );
 
-	wp_enqueue_style('oneforth-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+	wp_enqueue_style('oneforth-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 	wp_enqueue_style( 'elegance-style', get_stylesheet_uri() );
 
@@ -226,12 +227,12 @@ require get_template_directory() . '/inc/jetpack.php';
 function elegance_content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
 
-	1280 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 1280px';
+	1280 <= $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 
 	if ( 'page' === get_post_type() ) {
 		1280 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	} else {
-		1280 > $width && 1125 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 1125px';
+		1280 > $width && 1125 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 1920px';
 		1125 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	}
 
@@ -252,8 +253,8 @@ add_filter( 'wp_calculate_image_sizes', 'elegance_content_image_sizes_attr', 10 
  */
 function elegance_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
-		is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 87vw, (max-width: 1280px) 100vw, 1152px';
-		! is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1281px) 100vw, 1152px';
+			is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 87vw, (max-width: 1280px) 100vw, 1280px';
+			! is_active_sidebar( 'sidebar-1' ) && $attr['sizes'] = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1281px) 100vw, 1920px';
 	}
 	return $attr;
 }
