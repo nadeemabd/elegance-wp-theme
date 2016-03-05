@@ -780,6 +780,7 @@ a:hover, a:active {
 }
 .search-box-wrapper .search-box form label {
   flex: 1 0 auto;
+  display: flex;
 }
 
 @media screen and (min-width: 1280px) {
@@ -790,7 +791,7 @@ a:hover, a:active {
   }
 
   .search-box-wrapper {
-    position: initial;
+    position: inherit;
     max-width: 500px;
   }
 }
@@ -1013,6 +1014,11 @@ a:hover, a:active {
     margin-top: -32px;
   }
 }
+.single .widget {
+  display: inline-block;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1055,8 +1061,33 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
-.entry-header, .entry-content, .entry-footer {
+.blog .entry-header,
+.blog .entry-content,
+.blog .entry-footer {
   margin: 0 3.75em;
+}
+.blog .entry-header {
+  margin-bottom: 2.75em;
+}
+.blog .entry-header .cat-links, .blog .entry-header .entry-meta {
+  margin-left: 5px;
+}
+.blog .entry-title {
+  line-height: 1.2;
+}
+
+.single .entry-header,
+.single .entry-content,
+.single .entry-footer {
+  margin: 0 15em;
+}
+.single .entry-header {
+  text-align: center;
+  margin-bottom: 3.75em;
+}
+.single .entry-title {
+  line-height: 1.2;
+  margin-bottom: 12px;
 }
 
 .entry-content a {
@@ -1069,8 +1100,8 @@ a:hover, a:active {
   border-bottom-color: #3F4D69;
 }
 
-.post-thumbnail {
-  max-height: 700px;
+.post-thumbnail, .hero-image {
+  max-height: 900px;
   overflow: hidden;
   display: block;
   margin-bottom: 2em;
@@ -1203,18 +1234,35 @@ object {
   width: 75%;
 }
 
+@media screen and (min-width: 900px) {
+  .single .site-content .widget-area {
+    width: 100%;
+    column-count: 2;
+    column-gap: 2em;
+  }
+}
 @media screen and (min-width: 1280px) {
-  .site-content {
+  .blog .site-content {
     display: flex;
     justify-content: space-between;
   }
-
-  .content-area {
+  .blog .content-area {
     width: calc(75% - 2em);
   }
-
-  .site-content .widget-area {
+  .blog .site-content .widget-area {
     width: calc(25% - 0em);
+  }
+
+  .single .site-content {
+    display: block;
+  }
+  .single .content-area {
+    width: 100%;
+  }
+  .single .site-content .widget-area {
+    width: 100%;
+    column-count: 4;
+    column-gap: 1em;
   }
 }
 @media screen and (min-width: 1600px) {

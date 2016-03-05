@@ -1,7 +1,6 @@
 .sticky {
 	display: block;
 }
-
 .hentry {
 	background-color: #fff;
 	margin: 0 0 4em;
@@ -12,33 +11,58 @@
 		padding-top: 0;
 	}
 }
-
 .byline,
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
-
 .single .byline,
 .group-blog .byline {
 	display: inline;
 }
-
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
 
-.entry-header, .entry-content, .entry-footer {
-	margin: 0 3.75em;
+.blog {
+	.entry-header,
+	.entry-content,
+	.entry-footer {
+		margin: 0 3.75em;
+	}
+	.entry-header {
+		margin-bottom: 2.75em;
+		.cat-links, .entry-meta {
+			margin-left: 5px;
+		}
+	}
+	.entry-title {
+		line-height: 1.2;
+	}
+}
+
+.single {
+	.entry-header,
+	.entry-content,
+	.entry-footer {
+		margin: 0 15em;
+	}
+	.entry-header {
+		text-align: center;
+		margin-bottom: 3.75em;
+	}
+	.entry-title {
+		line-height: 1.2;
+		margin-bottom: 12px;
+	}
 }
 .entry-content {
-//	margin: 0 60px;
+	//	margin: 0 60px;
 	a {
 		color: $brand-color-4;
 		border-bottom: 1px dotted;
@@ -52,17 +76,15 @@
 	}
 }
 .entry-footer {
-//	margin: 0 60px;
+	//	margin: 0 60px;
 }
 .entry-title {
-//	font-size: 4rem;
-//	line-height: 1.25;
+	//	font-size: 4rem;
+	//	line-height: 1.25;
 }
-
-.post-thumbnail {
-	max-height: 700px;
+.post-thumbnail, .hero-image {
+	max-height: 900px;
 	overflow: hidden;
 	display: block;
 	margin-bottom: 2em;
 }
-

@@ -19,6 +19,14 @@
 	?>
 
 	<header class="entry-header">
+		<?php
+
+		$categories_list = get_the_category_list( esc_html__( ', ', 'elegance' ) );
+		if ( $categories_list && elegance_categorized_blog() ) {
+			printf( '<span class="cat-links">' . esc_html__( ' %1$s', 'elegance' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		}
+
+		?>
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
