@@ -107,11 +107,19 @@
 	&_rss {
 		li {
 			margin-bottom: 15px;
+			a {
+				border-left: 2px solid;
+				border-color: #ccc;
+				padding-left: 10px;
+				&:hover {
+					border-color: #45CEBE;
+				}
+			}
 		}
 		.rsswidget {
 			font-weight: 700;
 			display: inline-block;
-			line-height: 1.5;
+			line-height: 1.2;
 		}
 		.rss-date {
 			display: block;
@@ -132,6 +140,15 @@
 		a {
 //			display: inline-block;
 //			line-height: 1.5;
+		}
+	}
+	/* Search widget. */
+	&_search {
+		.search-form {
+			display: flex;
+			label {
+				flex: 1 0 auto;
+			}
 		}
 	}
 }
@@ -155,9 +172,4 @@
 			margin-top: -32px;
 		}
 	}
-}
-
-/* Search widget. */
-.widget_search .search-submit {
-	display: none;
 }
