@@ -81,6 +81,12 @@
 			column-gap: 1em;
 		}
 	}
+	.no-sidebar {
+		.content-area {
+//			width: 100%;
+			margin: 0 auto;
+		}
+	}
 }
 @media screen and (min-width: 1600px) {
 	.site-content {
