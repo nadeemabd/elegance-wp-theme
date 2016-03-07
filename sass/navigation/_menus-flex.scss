@@ -120,14 +120,42 @@
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
+//		box-shadow: 0 50px 60px rgba(0, 0, 0, .7);
+	}
+	.nav-links {
+		display: flex;
 	}
 	.nav-previous {
-		float: left;
-		width: 50%;
+		//				float: left;
+		//				width: 50%;
+		background-color: $light;
+		padding: 2em;
+		border-top: 1px solid #ccc;
+		flex: 1 0 auto;
 	}
 	.nav-next {
-		float: right;
+		//				float: right;
 		text-align: right;
-		width: 50%;
+		//				width: 50%;
+		background-color: $light;
+		padding: 2em;
+		border-top: 1px solid #ccc;
+		flex: 1 0 auto;
+	}
+}
+.post-navigation {
+	span {
+		display: block;
+	}
+	.meta-nav {
+		color: #c5c5c6;
+		font-size: 14px;
+		font-size: 1.4rem;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+	}
+	.post-title {
+		font-size: 22px;
+		font-size: 2.2rem;
 	}
 }
