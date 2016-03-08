@@ -1185,8 +1185,8 @@ a:hover, a:active {
 .single .entry-header,
 .single .entry-content,
 .single .entry-footer {
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 .single .entry-header {
   text-align: center;
@@ -1214,6 +1214,14 @@ a:hover, a:active {
   margin-bottom: 2em;
 }
 
+@media screen and (min-width: 600px) {
+  .single .entry-header,
+  .single .entry-content,
+  .single .entry-footer {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+}
 @media screen and (min-width: 900px) {
   .single .entry-header,
   .single .entry-content,
