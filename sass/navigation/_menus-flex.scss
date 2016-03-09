@@ -2,7 +2,7 @@
 
 .main-navigation {
 	width: 100%;
-//	background-color: yellow;
+	//	background-color: yellow;
 	.site-header-wrapper {
 		display: flex;
 		max-width: 90%;
@@ -10,7 +10,7 @@
 		justify-content: space-between;
 		position: relative;
 		flex-flow: row wrap;
-//		background-color: $color__navigation-background;
+		//		background-color: $color__navigation-background;
 	}
 	.site-header-menu {
 		order: 3;
@@ -30,7 +30,7 @@
 		&:hover > a,
 		&.focus > a {
 			background-color: $color__navigation-link-bg-hover;
-//			color: yellow;
+			//			color: yellow;
 		}
 	}
 	a {
@@ -71,7 +71,7 @@
 				background-color: $color__navigation-sublink-bg;
 				position: absolute;
 				z-index: 99999;
-//				display: none;
+				//				display: none;
 				flex-wrap: wrap;
 				justify-content: space-between;
 				ul {
@@ -114,33 +114,44 @@
 		}
 	}
 }
+
+
+
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
 	.site-main & {
-		margin: 0 0 1.5em;
+		margin: 0 0 3em;
 		overflow: hidden;
-//		box-shadow: 0 50px 60px rgba(0, 0, 0, .7);
+		//		box-shadow: 0 50px 60px rgba(0, 0, 0, .7);
 	}
 	.nav-links {
-		display: flex;
+		display: block;
 	}
 	.nav-previous {
-		//				float: left;
-		//				width: 50%;
 		background-color: $light;
 		padding: 2em;
 		border-top: 1px solid #ccc;
-		flex: 1 0 auto;
+		&:after {
+			@include clearfix;
+			@include clearfix-after;
+		}
+		a {
+			float: left;
+		}
 	}
 	.nav-next {
-		//				float: right;
 		text-align: right;
-		//				width: 50%;
 		background-color: $light;
 		padding: 2em;
 		border-top: 1px solid #ccc;
-		flex: 1 0 auto;
+		&:before, &:after {
+			@include clearfix;
+			@include clearfix-after;
+		}
+		a {
+			float: right;
+		}
 	}
 }
 .post-navigation {
@@ -157,5 +168,18 @@
 	.post-title {
 		font-size: 22px;
 		font-size: 2.2rem;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
+		.nav-links {
+			display: flex;
+		}
+		.nav-previous, .nav-next {
+			flex: 1 0 auto;
+		}
 	}
 }
