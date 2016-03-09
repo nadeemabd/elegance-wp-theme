@@ -6,6 +6,8 @@
 }
 .comments-area {
 	background-color: $light;
+	margin: 0 0 3em;
+	box-shadow: 0 50px 60px rgba(0, 0, 0, .7);
 }
 .comments-title {
 	//	text-align: center;
@@ -60,7 +62,7 @@ li.comment {
 .comment-respond {
 	padding: 1em 3em;
 }
-.children {
+li.comment .children {
 	margin-left: 0;
 	> li {
 		padding-left: 15px;
@@ -87,7 +89,7 @@ li.comment {
 			top: 6px;
 		}
 	}
-	.children {
+	li.comment .children {
 		> li {
 			padding-left: 30px;
 		}
