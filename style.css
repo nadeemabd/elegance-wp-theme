@@ -361,7 +361,10 @@ p {
   margin: 0 0 1.5em;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
   font-style: italic;
 }
 
@@ -383,6 +386,10 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1.6em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid #d1d1d1;
 }
 @media screen and (min-width: 37.5em) {
   pre {
@@ -391,24 +398,32 @@ pre {
   }
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 1.5rem;
 }
 @media screen and (min-width: 37.5em) {
-  code, kbd, tt, var {
+  code,
+  kbd,
+  tt,
+  var {
     font-size: 16.875px;
     font-size: 1.6875rem;
   }
 }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none;
 }
@@ -768,15 +783,13 @@ a:hover, a:active {
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-  margin: 0 0 1.5em;
+  margin: 0 0 3em;
   overflow: hidden;
 }
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
@@ -784,9 +797,18 @@ a:hover, a:active {
   background-color: #fff;
   padding: 2em;
   border-top: 1px solid #ccc;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+}
+.comment-navigation .nav-previous:after,
+.posts-navigation .nav-previous:after,
+.post-navigation .nav-previous:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.comment-navigation .nav-previous a,
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a {
+  float: left;
 }
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
@@ -795,9 +817,20 @@ a:hover, a:active {
   background-color: #fff;
   padding: 2em;
   border-top: 1px solid #ccc;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+}
+.comment-navigation .nav-next:before, .comment-navigation .nav-next:after,
+.posts-navigation .nav-next:before,
+.posts-navigation .nav-next:after,
+.post-navigation .nav-next:before,
+.post-navigation .nav-next:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a {
+  float: right;
 }
 
 .post-navigation span {
@@ -815,6 +848,24 @@ a:hover, a:active {
   font-size: 2.2rem;
 }
 
+@media screen and (min-width: 900px) {
+  .comment-navigation .nav-links,
+  .posts-navigation .nav-links,
+  .post-navigation .nav-links {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .comment-navigation .nav-previous, .comment-navigation .nav-next,
+  .posts-navigation .nav-previous,
+  .posts-navigation .nav-next,
+  .post-navigation .nav-previous,
+  .post-navigation .nav-next {
+    -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+}
 /*--------------------------------------------------------------
 ## Search
 --------------------------------------------------------------*/
@@ -1148,6 +1199,10 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
+.cat-links {
+  position: relative;
+}
+
 .tags-links {
   margin-right: 10px;
   color: #c5c5c6;
@@ -1259,6 +1314,8 @@ a:hover, a:active {
 
 .comments-area {
   background-color: #fff;
+  margin: 0 0 3em;
+  box-shadow: 0 50px 60px rgba(0, 0, 0, 0.7);
 }
 
 .comments-title {
@@ -1318,14 +1375,14 @@ li.comment .comment-body {
   padding: 1em 3em;
 }
 
-.children {
+li.comment .children {
   margin-left: 0;
 }
-.children > li {
+li.comment .children > li {
   padding-left: 15px;
   position: relative;
 }
-.children > li:before {
+li.comment .children > li:before {
   content: "";
   width: 0;
   height: 0;
@@ -1344,7 +1401,7 @@ li.comment .comment-body {
     top: 6px;
   }
 
-  .children > li {
+  li.comment .children > li {
     padding-left: 30px;
   }
 }
