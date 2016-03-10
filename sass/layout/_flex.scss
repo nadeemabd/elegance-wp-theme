@@ -29,7 +29,8 @@
 	width: $size__site-main;
 }
 @media screen and (min-width: 900px) {
-	.single {
+	.single,
+	.page {
 		.site-content .widget-area {
 			//	flex: 1;
 			//	float: left;
@@ -63,7 +64,8 @@
 			width: calc(#{$size__site-sidebar} - 0em);
 		}
 	}
-	.single {
+	.single,
+	.page {
 		.site-content {
 			display: block;
 		}
@@ -84,7 +86,7 @@
 	}
 	.no-sidebar {
 		.content-area {
-//			width: 100%;
+			//			width: 100%;
 			margin: 0 auto;
 		}
 	}

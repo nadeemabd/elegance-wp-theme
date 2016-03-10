@@ -955,13 +955,13 @@ a:hover, a:active {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em;
+  margin: 0 1.5em 1.5em 0;
 }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5em;
+  margin: 0 0 1.5em 1.5em;
 }
 
 .aligncenter {
@@ -1013,17 +1013,21 @@ a:hover, a:active {
   padding: 0 0 0 8px;
   margin-left: 16px;
 }
-.widget ul, .widget ol {
+.widget ul,
+.widget ol {
   margin: 0;
 }
-.widget ul li, .widget ol li {
+.widget ul li,
+.widget ol li {
   line-height: 2;
   position: relative;
 }
-.widget ul ul > li, .widget ol ul > li {
+.widget ul ul > li,
+.widget ol ul > li {
   padding: 0 0 0 .8em;
 }
-.widget ul ul > li::before, .widget ol ul > li::before {
+.widget ul ul > li::before,
+.widget ol ul > li::before {
   content: "";
   width: 2px;
   height: 2em;
@@ -1031,7 +1035,8 @@ a:hover, a:active {
   background-color: #e3e3e3;
   left: 0;
 }
-.widget ul ul > li:hover:before, .widget ol ul > li:hover:before {
+.widget ul ul > li:hover:before,
+.widget ol ul > li:hover:before {
   content: "";
   background-color: #45CEBE;
   width: 2px;
@@ -1048,7 +1053,8 @@ a:hover, a:active {
   border-color: #ccc;
   padding-left: 8px;
 }
-.widget_calendar td, .widget_calendar th {
+.widget_calendar td,
+.widget_calendar th {
   text-align: center;
 }
 .widget_rss li {
@@ -1102,7 +1108,8 @@ a:hover, a:active {
     margin-top: -32px;
   }
 }
-.single .widget {
+.single .widget,
+.page .widget {
   display: inline-block;
   width: 100%;
 }
@@ -1177,29 +1184,36 @@ a:hover, a:active {
 .blog .entry-header {
   margin-bottom: 2.75em;
 }
-.blog .entry-header .cat-links, .blog .entry-header .entry-meta {
+.blog .entry-header .cat-links,
+.blog .entry-header .entry-meta {
   margin-left: 5px;
 }
 .blog .entry-title {
   line-height: 1.2;
 }
 
-.single .hentry {
-  margin-bottom: 0;
-}
 .single .entry-header,
 .single .entry-content,
-.single .entry-footer {
+.single .entry-footer,
+.page .entry-header,
+.page .entry-content,
+.page .entry-footer {
   margin-left: 2em;
   margin-right: 2em;
 }
-.single .entry-header {
+.single .entry-header,
+.page .entry-header {
   text-align: center;
   margin-bottom: 3.75em;
 }
-.single .entry-title {
+.single .entry-title,
+.page .entry-title {
   line-height: 1.2;
   margin-bottom: 12px;
+}
+
+.single .hentry {
+  margin-bottom: 0;
 }
 
 .entry-content a {
@@ -1212,7 +1226,8 @@ a:hover, a:active {
   border-bottom-color: #3F4D69;
 }
 
-.post-thumbnail, .hero-image {
+.post-thumbnail,
+.hero-image {
   max-height: 900px;
   overflow: hidden;
   display: block;
@@ -1222,7 +1237,10 @@ a:hover, a:active {
 @media screen and (min-width: 600px) {
   .single .entry-header,
   .single .entry-content,
-  .single .entry-footer {
+  .single .entry-footer,
+  .page .entry-header,
+  .page .entry-content,
+  .page .entry-footer {
     margin-left: 5em;
     margin-right: 5em;
   }
@@ -1230,7 +1248,10 @@ a:hover, a:active {
 @media screen and (min-width: 900px) {
   .single .entry-header,
   .single .entry-content,
-  .single .entry-footer {
+  .single .entry-footer,
+  .page .entry-header,
+  .page .entry-content,
+  .page .entry-footer {
     margin-left: 10em;
     margin-right: 10em;
   }
@@ -1238,7 +1259,10 @@ a:hover, a:active {
 @media screen and (min-width: 1280px) {
   .single .entry-header,
   .single .entry-content,
-  .single .entry-footer {
+  .single .entry-footer,
+  .page .entry-header,
+  .page .entry-content,
+  .page .entry-footer {
     margin-left: 15em;
     margin-right: 15em;
   }
@@ -1465,7 +1489,8 @@ object {
 }
 
 @media screen and (min-width: 900px) {
-  .single .site-content .widget-area {
+  .single .site-content .widget-area,
+  .page .site-content .widget-area {
     width: 100%;
     column-count: 2;
     column-gap: 2em;
@@ -1483,13 +1508,16 @@ object {
     width: calc(25% - 0em);
   }
 
-  .single .site-content {
+  .single .site-content,
+  .page .site-content {
     display: block;
   }
-  .single .content-area {
+  .single .content-area,
+  .page .content-area {
     width: 100%;
   }
-  .single .site-content .widget-area {
+  .single .site-content .widget-area,
+  .page .site-content .widget-area {
     width: 100%;
     column-count: 3;
     column-gap: 2em;
