@@ -1491,8 +1491,8 @@ object {
   }
   .single .site-content .widget-area {
     width: 100%;
-    column-count: 4;
-    column-gap: 1em;
+    column-count: 3;
+    column-gap: 2em;
   }
 
   .no-sidebar .content-area {
