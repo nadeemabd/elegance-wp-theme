@@ -28,12 +28,30 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
-
+.cat-links {
+	position: relative;
+}
+.tags-links {
+	margin-right: 10px;
+	color: lighten($brand-color-5, 50);
+	a {
+		color: lighten($brand-color-5, 50);
+		font-style: italic;
+		&:hover,
+		&:focus {
+			color: $brand-color-4;
+		}
+		&:before {
+			content: "#";
+		}
+	}
+}
 .blog {
 	.entry-header,
 	.entry-content,
 	.entry-footer {
-		margin: 0 3.75em;
+		margin-left: 3.75em;
+		margin-right: 3.75em;
 	}
 	.entry-header {
 		margin-bottom: 2.75em;
@@ -47,10 +65,14 @@
 }
 
 .single {
+	.hentry {
+		margin-bottom: 0;
+	}
 	.entry-header,
 	.entry-content,
 	.entry-footer {
-		margin: 0 15em;
+		margin-left: 2em;
+		margin-right: 2em;
 	}
 	.entry-header {
 		text-align: center;
@@ -87,4 +109,36 @@
 	overflow: hidden;
 	display: block;
 	margin-bottom: 2em;
+}
+@media screen and (min-width: 600px) {
+	.single {
+		.entry-header,
+		.entry-content,
+		.entry-footer {
+			margin-left: 5em;
+			margin-right: 5em;
+		}
+	}
+}
+@media screen and (min-width: 900px) {
+	.single {
+		.entry-header,
+		.entry-content,
+		.entry-footer {
+			margin-left: 10em;
+			margin-right: 10em;
+		}
+	}
+}
+
+
+@media screen and (min-width: 1280px) {
+	.single {
+		.entry-header,
+		.entry-content,
+		.entry-footer {
+			margin-left: 15em;
+			margin-right: 15em;
+		}
+	}
 }

@@ -55,7 +55,7 @@ function elegance_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'elegance' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links"><i class="fa fa-hashtag"></i>' . esc_html__( ' %1$s', 'elegance' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( ' %1$s', 'elegance' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 

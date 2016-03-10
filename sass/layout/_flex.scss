@@ -3,6 +3,7 @@
 	display: block;
 	max-width: 90%;
 	margin: 0 auto;
+	word-wrap: break-word;
 }
 .content-area {
 	//	flex: 2;
@@ -77,8 +78,14 @@
 			//	float: left;
 			//	overflow: hidden;
 			width: 100%;
-			column-count: 4;
-			column-gap: 1em;
+			column-count: 3;
+			column-gap: 2em;
+		}
+	}
+	.no-sidebar {
+		.content-area {
+//			width: 100%;
+			margin: 0 auto;
 		}
 	}
 }

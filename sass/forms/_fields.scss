@@ -3,32 +3,34 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="tel"],
+input[type="number"],
 textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-//	border-radius: 3px;
+	//	border-radius: 3px;
 	width: 100%;
-
 	&:hover {
 		color: $color__text-input-hover;
 		border-color: $color__border-input-hover;
 	}
-
 	&:focus {
-//		color: $color__text-input-focus;
+		//		color: $color__text-input-focus;
 		border-color: $color__border-input-focus;
 	}
 }
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"] {
-	padding: 3px;
-}
-
+input[type="search"],
+input[type="tel"],
+input[type="number"],
 textarea {
-	padding-left: 3px;
-//	width: 100%;
+	padding: 0.625em 0.4375em;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
 }
