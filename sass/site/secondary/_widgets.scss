@@ -133,14 +133,14 @@
 		}
 	}
 	/* Search widget. */
-	&_search {
-		.search-form {
-			display: flex;
-			label {
-				flex: 1 0 auto;
-			}
-		}
-	}
+	//&_search {
+	//	.search-form {
+	//		display: flex;
+	//		label {
+	//			flex: 1 0 auto;
+	//		}
+	//	}
+	//}
 }
 .tagcloud a {
 	border: 1px solid #ccc;
@@ -161,10 +161,10 @@
 		}
 	}
 }
-.single,
-.page {
+//.single,
+//.page {
 	.widget {
 		display: inline-block;
 		width: 100%;
 	}
-}
+//}
