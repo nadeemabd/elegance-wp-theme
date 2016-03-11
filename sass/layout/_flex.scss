@@ -28,9 +28,9 @@
 	clear: both;
 	width: $size__site-main;
 }
-@media screen and (min-width: 900px) {
-	.single,
-	.page {
+@media screen and (min-width: 900px) and (max-width: 1279px) {
+	//.single,
+	//.page {
 		.site-content .widget-area {
 			//	flex: 1;
 			//	float: left;
@@ -40,10 +40,10 @@
 			column-count: 2;
 			column-gap: 2em;
 		}
-	}
+	//}
 }
 @media screen and (min-width: 1280px) {
-	.blog {
+	//.blog {
 		.site-content {
 			//		padding-top: 2em;
 			display: flex;
@@ -63,9 +63,9 @@
 			//	overflow: hidden;
 			width: calc(#{$size__site-sidebar} - 0em);
 		}
-	}
-	.single,
-	.page {
+	//}
+	body.single,
+	body.page {
 		.site-content {
 			display: block;
 		}
@@ -84,7 +84,7 @@
 			column-gap: 2em;
 		}
 	}
-	.no-sidebar {
+	body.no-sidebar {
 		.content-area {
 			//			width: 100%;
 			margin: 0 auto;
