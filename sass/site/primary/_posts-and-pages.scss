@@ -170,3 +170,32 @@ body.page {
 .PDS_Poll {
 	margin-bottom: 1.5em;
 }
+
+.site-main {
+	.infinite-loader {
+		color: $light;
+		height: 40px;
+		width: 40px;
+		margin: 0 auto;
+	}
+	#infinite-handle {
+		text-align: center;
+		span {
+			background: transparent;
+			border: 2px solid;
+			border-color: $light;
+			color: $light;
+			border-radius: 0;
+			padding: 0.6em 1em;
+			font-size: 2.2rem;
+			button {
+				text-transform: uppercase;
+			}
+			&:hover {
+				background: $brand-color-4;
+				color: $light;
+				border-color: $brand-color-4;
+			}
+		}
+	}
+}

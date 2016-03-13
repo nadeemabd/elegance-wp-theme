@@ -2,7 +2,7 @@
 	padding-top: 2em;
 	display: block;
 	max-width: 90%;
-	margin: 0 auto;
+	margin: 0 auto 7em;
 	word-wrap: break-word;
 }
 .content-area {
@@ -12,8 +12,7 @@
 	//	width: calc(#{$size__site-main} - 1em);
 }
 .site-main {
-	//	background-color: #fff;
-	//	margin: 0 0 0 $size__site-sidebar;
+
 }
 .site-content .widget-area {
 	//	flex: 1;

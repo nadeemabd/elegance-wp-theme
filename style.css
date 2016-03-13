@@ -774,38 +774,35 @@ a:hover, a:active {
     max-width: 80%;
   }
 }
+/*--------------------------------------------------------------
+## Post and Comment Navigation
+--------------------------------------------------------------*/
 .site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 3em;
   overflow: hidden;
 }
 .comment-navigation .nav-links,
-.posts-navigation .nav-links,
 .post-navigation .nav-links {
   display: block;
 }
 .comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   background-color: #fff;
   padding: 2em;
   border-top: 1px solid #ccc;
 }
 .comment-navigation .nav-previous:after,
-.posts-navigation .nav-previous:after,
 .post-navigation .nav-previous:after {
   content: "";
   display: table;
   clear: both;
 }
 .comment-navigation .nav-previous a,
-.posts-navigation .nav-previous a,
 .post-navigation .nav-previous a {
   float: left;
 }
 .comment-navigation .nav-next,
-.posts-navigation .nav-next,
 .post-navigation .nav-next {
   text-align: right;
   background-color: #fff;
@@ -813,8 +810,6 @@ a:hover, a:active {
   border-top: 1px solid #ccc;
 }
 .comment-navigation .nav-next:before, .comment-navigation .nav-next:after,
-.posts-navigation .nav-next:before,
-.posts-navigation .nav-next:after,
 .post-navigation .nav-next:before,
 .post-navigation .nav-next:after {
   content: "";
@@ -822,7 +817,6 @@ a:hover, a:active {
   clear: both;
 }
 .comment-navigation .nav-next a,
-.posts-navigation .nav-next a,
 .post-navigation .nav-next a {
   float: right;
 }
@@ -837,27 +831,82 @@ a:hover, a:active {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 37.5em) {
+  .post-navigation .meta-nav {
+    font-size: 15.75px;
+    font-size: 1.575rem;
+  }
+}
 .post-navigation .post-title {
   font-size: 22px;
   font-size: 2.2rem;
 }
+@media screen and (min-width: 37.5em) {
+  .post-navigation .post-title {
+    font-size: 24.75px;
+    font-size: 2.475rem;
+  }
+}
+
+.pagination {
+  margin-bottom: 3em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.pagination .nav-links {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+}
+.pagination .prev.page-numbers,
+.pagination .next.page-numbers {
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 18px;
+}
+@media screen and (min-width: 37.5em) {
+  .pagination .prev.page-numbers,
+  .pagination .next.page-numbers {
+    font-size: 15.75px;
+    font-size: 1.575rem;
+  }
+}
+.pagination .page-numbers {
+  padding: .875em;
+}
+.pagination .page-numbers.current {
+  background-color: #45CEBE;
+  color: #fff;
+}
 
 @media screen and (min-width: 900px) {
   .comment-navigation .nav-links,
-  .posts-navigation .nav-links,
   .post-navigation .nav-links {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
   .comment-navigation .nav-previous, .comment-navigation .nav-next,
-  .posts-navigation .nav-previous,
-  .posts-navigation .nav-next,
   .post-navigation .nav-previous,
   .post-navigation .nav-next {
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .pagination {
+    margin-bottom: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -1344,6 +1393,33 @@ body.page .entry-title {
   margin-bottom: 1.5em;
 }
 
+.site-main .infinite-loader {
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+}
+.site-main #infinite-handle {
+  text-align: center;
+}
+.site-main #infinite-handle span {
+  background: transparent;
+  border: 2px solid;
+  border-color: #fff;
+  color: #fff;
+  border-radius: 0;
+  padding: 0.6em 1em;
+  font-size: 2.2rem;
+}
+.site-main #infinite-handle span button {
+  text-transform: uppercase;
+}
+.site-main #infinite-handle span:hover {
+  background: #45CEBE;
+  color: #fff;
+  border-color: #45CEBE;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1556,7 +1632,7 @@ object {
   padding-top: 2em;
   display: block;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 7em;
   word-wrap: break-word;
 }
 

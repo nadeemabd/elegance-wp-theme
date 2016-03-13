@@ -1,0 +1,95 @@
+
+.comment-navigation,
+.post-navigation {
+  .site-main & {
+    margin: 0 0 3em;
+    overflow: hidden;
+    //		box-shadow: 0 50px 60px rgba(0, 0, 0, .7);
+  }
+  .nav-links {
+    display: block;
+  }
+  .nav-previous {
+    background-color: $light;
+    padding: 2em;
+    border-top: 1px solid #ccc;
+    &:after {
+      @include clearfix;
+      @include clearfix-after;
+    }
+    a {
+      float: left;
+    }
+  }
+  .nav-next {
+    text-align: right;
+    background-color: $light;
+    padding: 2em;
+    border-top: 1px solid #ccc;
+    &:before, &:after {
+      @include clearfix;
+      @include clearfix-after;
+    }
+    a {
+      float: right;
+    }
+  }
+}
+.post-navigation {
+  span {
+    display: block;
+  }
+  .meta-nav {
+    color: #c5c5c6;
+    @include font-size(.875);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .post-title {
+    @include font-size(1.375);
+  }
+}
+
+.pagination {
+  margin-bottom: 3em;
+  display: flex;
+  justify-content: flex-end;
+  .nav-links {
+    display: flex;
+    //justify-content: flex-end;
+    flex-wrap: wrap;
+    box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
+    background-color: $light;
+    //align-items: center;
+  }
+  .prev.page-numbers,
+  .next.page-numbers {
+    @include font-size(.875);
+    text-transform: uppercase;
+    padding: 18px;
+
+  }
+  .page-numbers {
+    padding: .875em;
+    &.current {
+      background-color: $brand-color-4;
+      color: $light;
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .comment-navigation,
+  .post-navigation {
+    .nav-links {
+      display: flex;
+    }
+    .nav-previous, .nav-next {
+      flex: 1 0 auto;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .pagination {
+    margin-bottom: 0;
+  }
+}
