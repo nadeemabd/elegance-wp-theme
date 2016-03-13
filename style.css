@@ -1344,6 +1344,33 @@ body.page .entry-title {
   margin-bottom: 1.5em;
 }
 
+.site-main .infinite-loader {
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+}
+.site-main #infinite-handle {
+  text-align: center;
+}
+.site-main #infinite-handle span {
+  background: transparent;
+  border: 2px solid;
+  border-color: #fff;
+  color: #fff;
+  border-radius: 0;
+  padding: 0.6em 1em;
+  font-size: 2.2rem;
+}
+.site-main #infinite-handle span button {
+  text-transform: uppercase;
+}
+.site-main #infinite-handle span:hover {
+  background: #45CEBE;
+  color: #fff;
+  border-color: #45CEBE;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
