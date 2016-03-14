@@ -1,0 +1,52 @@
+.site-footer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: $brand-color-6;
+  padding-bottom: 2em;
+  flex-wrap: wrap;
+  @include font-size(.8125);
+  a {
+    color: $light;
+    &:hover,
+    &:focus {
+      color: $brand-color-4;
+    }
+  }
+  .site-title {
+    //&:after {
+    //  content: "\002f";
+    //  padding-left: 5px;
+    //}
+  }
+  .site-info,
+  .social-navigation,
+  .theme-info {
+    margin-bottom: 1em;
+  }
+  .site-info {
+    order: 1;
+  }
+  .theme-info {
+    order: 2;
+  }
+  .social-navigation {
+    order: 3;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .site-footer {
+    width: 80%;
+    .site-info {
+      order: 1;
+    }
+    .theme-info {
+      order: 3;
+    }
+    .social-navigation {
+      order: 2;
+    }
+  }
+}

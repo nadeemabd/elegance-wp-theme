@@ -51,3 +51,10 @@ img {
 }
 
 @import "tables";
+
+
+i {
+	font-family: FontAwesome;
+	@include font-size(1);
+	font-weight: inherit;
+}

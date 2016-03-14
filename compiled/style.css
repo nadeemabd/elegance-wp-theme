@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Elegance
 Theme URI: http://underscores.me/
@@ -524,6 +525,19 @@ table th, table td {
   border: 1px solid #eee;
 }
 
+i {
+  font-family: FontAwesome;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: inherit;
+}
+@media screen and (min-width: 37.5em) {
+  i {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -639,6 +653,163 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Social Navigation
+--------------------------------------------------------------*/
+.social-navigation ul {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.social-navigation ul li {
+  margin: 0 6px;
+}
+.social-navigation a[href*="500px.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="500px.com"]:hover {
+  color: #0099e5;
+}
+.social-navigation a[href*="behance.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="behance.com"]:hover {
+  color: #1769ff;
+}
+.social-navigation a[href*="codepen.io"]:before {
+  content: "";
+}
+.social-navigation a[href*="codepen.io"]:hover {
+  color: #191919;
+}
+.social-navigation a[href*="deviantart.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="deviantart.com"]:hover {
+  color: #05cc47;
+}
+.social-navigation a[href*="dribbble.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="dribbble.com"]:hover {
+  color: #ea4c89;
+}
+.social-navigation a[href*="facebook.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="facebook.com"]:hover {
+  color: #3b5998;
+}
+.social-navigation a[href*="flickr.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="flickr.com"]:hover {
+  color: #0063dc;
+}
+.social-navigation a[href*="github.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="github.com"]:hover {
+  color: #4183c4;
+}
+.social-navigation a[href*="google.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="google.com"]:hover {
+  color: #dc4e41;
+}
+.social-navigation a[href*="instagram.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="instagram.com"]:hover {
+  color: #3f729b;
+}
+.social-navigation a[href*="linkedin.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="linkedin.com"]:hover {
+  color: #0077b5;
+}
+.social-navigation a[href*="medium.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="medium.com"]:hover {
+  color: #0BE370;
+}
+.social-navigation a[href*="pinterest.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="pinterest.com"]:hover {
+  color: #bd081c;
+}
+.social-navigation a[href*="soundcloud.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="soundcloud.com"]:hover {
+  color: #ff8800;
+}
+.social-navigation a[href*="tumblr.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="tumblr.com"]:hover {
+  color: #35465c;
+}
+.social-navigation a[href*="twitch.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="twitch.com"]:hover {
+  color: #6441a5;
+}
+.social-navigation a[href*="twitter.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="twitter.com"]:hover {
+  color: #55acee;
+}
+.social-navigation a[href*="vimeo.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="vimeo.com"]:hover {
+  color: ##17B3E8;
+}
+.social-navigation a[href*="wordpress.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="wordpress.com"]:hover {
+  color: #0087BE;
+}
+.social-navigation a[href*="wordpress.org"]:before {
+  content: "";
+}
+.social-navigation a[href*="wordpress.org"]:hover {
+  color: #0087BE;
+}
+.social-navigation a[href*="youtube.com"]:before {
+  content: "";
+}
+.social-navigation a[href*="youtube.com"]:hover {
+  color: #cd201f;
+}
+.social-navigation a:before {
+  content: '\f0c1';
+  font-family: FontAwesome;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 37.5em) {
+  .social-navigation a:before {
+    font-size: 20.25px;
+    font-size: 2.025rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .social-navigation ul {
+    justify-content: space-between;
+  }
+}
+/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 /* Styles for mobile menu*/
@@ -676,7 +847,7 @@ a:hover, a:active {
   display: block;
   text-decoration: none;
   padding: .6em;
-  color: #F5F6FA;
+  color: #ccc;
 }
 
 .menu-toggle,
@@ -924,7 +1095,7 @@ a:hover, a:active {
   cursor: pointer;
 }
 .search-toggle .search-icon i {
-  color: #F5F6FA;
+  color: #ccc;
 }
 .search-toggle .search-icon:hover {
   background-color: #3F4D69;
@@ -1479,6 +1650,61 @@ li.comment .children > li:before {
   }
 }
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+  padding-bottom: 2em;
+  flex-wrap: wrap;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 37.5em) {
+  .site-footer {
+    font-size: 14.625px;
+    font-size: 1.4625rem;
+  }
+}
+.site-footer a {
+  color: #fff;
+}
+.site-footer a:hover, .site-footer a:focus {
+  color: #45CEBE;
+}
+.site-footer .site-info,
+.site-footer .social-navigation,
+.site-footer .theme-info {
+  margin-bottom: 1em;
+}
+.site-footer .site-info {
+  order: 1;
+}
+.site-footer .theme-info {
+  order: 2;
+}
+.site-footer .social-navigation {
+  order: 3;
+}
+
+@media screen and (min-width: 900px) {
+  .site-footer {
+    width: 80%;
+  }
+  .site-footer .site-info {
+    order: 1;
+  }
+  .site-footer .theme-info {
+    order: 3;
+  }
+  .site-footer .social-navigation {
+    order: 2;
+  }
+}
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -1580,11 +1806,6 @@ object {
   max-width: 90%;
   margin: 0 auto 7em;
   word-wrap: break-word;
-}
-
-.site-footer {
-  clear: both;
-  width: 75%;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1279px) {
