@@ -1,0 +1,64 @@
+$links: ('500px.com' '\f26e' '#0099e5'),
+        ('behance.com' '\f1b4' '#1769ff'),
+        ('codepen.io' '\f1cb' '#191919'),
+        ('deviantart.com' '\f1bd' '#05cc47'),
+        ('dribbble.com' '\f17d' '#ea4c89'),
+        ('facebook.com' '\f09a' '#3b5998'),
+        ('flickr.com' '\f16e' '#0063dc'),
+        ('github.com' '\f09b' '#4183c4'),
+        ('google.com' '\f0d5' '#dc4e41'),
+        ('instagram.com' '\f16d' '#3f729b'),
+        ('linkedin.com' '\f0e1' '#0077b5'),
+        ('medium.com' '\f23a' '#0BE370'),
+        ('pinterest.com' '\f0d2' '#bd081c'),
+        ('soundcloud.com' '\f1be' '#ff8800'),
+        ('tumblr.com' '\f173' '#35465c'),
+        ('twitch.com' '\f1e8' '#6441a5'),
+        ('twitter.com' '\f099' '#55acee'),
+        ('vimeo.com' '\f27d' '##17B3E8'),
+        ('wordpress.com' '\f19a' '#0087BE'),
+        ('wordpress.org' '\f19a' '#0087BE'),
+        ('youtube.com' '\f16a' '#cd201f');
+
+.social-navigation {
+  ul {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    li {
+      margin: 0 6px;
+    }
+  }
+  a {
+    @each $link in $links {
+      $name: nth($link, 1);
+      $icon: nth($link, 2);
+      $color: nth($link, 3);
+
+      &[href*="#{$name}"] {
+        &:before {
+          content: '#{$icon}';
+        }
+        &:hover {
+          color: #{$color};
+        }
+      }
+    }
+    &:before {
+      content: '\f0c1';
+      font-family: FontAwesome;
+      @include font-size(1.125);
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .social-navigation {
+    //flex-basis: 20%;
+    ul {
+      justify-content: space-between;
+    }
+  }
+}
