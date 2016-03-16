@@ -515,6 +515,7 @@ img {
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */
+  vertical-align: middle;
 }
 
 table {
@@ -1480,12 +1481,36 @@ body.page .entry-title {
   margin-bottom: 0;
 }
 
-.entry-content a {
+.entry-content a,
+.entry-summary a,
+.taxonomy-description a,
+.logged-in-as a,
+.comment-content a,
+.pingback .comment-body a,
+.textwidget a {
   color: #45CEBE;
   border-bottom: 1px dotted;
   border-bottom-color: #45CEBE;
 }
-.entry-content a:hover, .entry-content a:focus, .entry-content a:active {
+.entry-content a:hover, .entry-content a:focus, .entry-content a:active,
+.entry-summary a:hover,
+.entry-summary a:focus,
+.entry-summary a:active,
+.taxonomy-description a:hover,
+.taxonomy-description a:focus,
+.taxonomy-description a:active,
+.logged-in-as a:hover,
+.logged-in-as a:focus,
+.logged-in-as a:active,
+.comment-content a:hover,
+.comment-content a:focus,
+.comment-content a:active,
+.pingback .comment-body a:hover,
+.pingback .comment-body a:focus,
+.pingback .comment-body a:active,
+.textwidget a:hover,
+.textwidget a:focus,
+.textwidget a:active {
   color: #3F4D69;
   border-bottom-color: #3F4D69;
 }
@@ -1597,6 +1622,10 @@ body.page .entry-title {
   background: #45CEBE;
   color: #fff;
   border-color: #45CEBE;
+}
+
+.wp-audio-shortcode a {
+  border-bottom: none;
 }
 
 /*--------------------------------------------------------------
@@ -1802,6 +1831,10 @@ li.comment .children > li:before {
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
+.entry-content a img, .entry-summary a img, .comment-content a img, .textwidget a img {
+  display: block;
+}
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -1831,11 +1864,22 @@ object {
   margin-right: auto;
 }
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+  margin-bottom: 0.8075em;
+  padding: .25em;
 }
 
 .wp-caption-text {
   text-align: center;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #999999;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (min-width: 37.5em) {
+  .wp-caption-text {
+    font-size: 15.75px;
+    font-size: 1.575rem;
+  }
 }
 
 /*--------------------------------------------------------------
