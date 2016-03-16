@@ -7,10 +7,14 @@
 	}
 
 	.wp-caption-text {
-		margin: 0.8075em 0;
+		margin-bottom: 0.8075em;
+		padding: .25em;
 	}
 }
 
 .wp-caption-text {
 	text-align: center;
+	@include font-size(.875);
+	color: darken($brand-color-6, 20);
+	border-bottom: 1px solid $brand-color-6;
 }
