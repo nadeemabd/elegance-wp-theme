@@ -83,7 +83,14 @@ body.page {
 .single .hentry {
 	margin-bottom: 0;
 }
-.entry-content {
+
+.entry-content,
+.entry-summary,
+.taxonomy-description,
+.logged-in-as,
+.comment-content,
+.pingback .comment-body,
+.textwidget {
 	//	margin: 0 60px;
 	a {
 		color: $brand-color-4;
@@ -198,4 +205,8 @@ body.page {
 			}
 		}
 	}
+}
+
+.wp-audio-shortcode a {
+	border-bottom: none;
 }
