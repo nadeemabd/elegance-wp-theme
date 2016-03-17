@@ -1487,7 +1487,8 @@ body.page .entry-title {
 .logged-in-as a,
 .comment-content a,
 .pingback .comment-body a,
-.textwidget a {
+.textwidget a,
+.error-content a {
   color: #45CEBE;
   border-bottom: 1px dotted;
   border-bottom-color: #45CEBE;
@@ -1510,7 +1511,10 @@ body.page .entry-title {
 .pingback .comment-body a:active,
 .textwidget a:hover,
 .textwidget a:focus,
-.textwidget a:active {
+.textwidget a:active,
+.error-content a:hover,
+.error-content a:focus,
+.error-content a:active {
   color: #3F4D69;
   border-bottom-color: #3F4D69;
 }
@@ -1835,6 +1839,67 @@ li.comment .children > li:before {
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
+  }
+}
+/*--------------------------------------------------------------
+## 404
+--------------------------------------------------------------*/
+body.error404 .content-area {
+  width: 100%;
+  display: block;
+}
+body.error404 .page-content {
+  margin: 0;
+}
+
+.error-content {
+  background-color: #fff;
+  padding: 4em;
+  text-align: center;
+  color: #454547;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 50px 60px rgba(0, 0, 0, 0.7);
+}
+
+.error-header {
+  font-size: 128px;
+  font-size: 12.8rem;
+  line-height: 1;
+  text-wrap: none;
+}
+@media screen and (min-width: 37.5em) {
+  .error-header {
+    font-size: 144px;
+    font-size: 14.4rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .error-content {
+    width: 80%;
+  }
+
+  .error-header {
+    font-size: 240px;
+    font-size: 24rem;
+  }
+}
+@media screen and (min-width: 900px) and (min-width: 37.5em) {
+  .error-header {
+    font-size: 270px;
+    font-size: 27rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .error-content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .error-content {
+    width: 50%;
   }
 }
 /*--------------------------------------------------------------

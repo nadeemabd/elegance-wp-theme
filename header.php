@@ -33,16 +33,18 @@
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<?php if (!is_404()): ?>
+			<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="site-header-wrapper">
-				<button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'elegance' ); ?></button>
+				<button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu"
+						aria-expanded="false"><?php esc_html_e('Primary Menu', 'elegance'); ?></button>
 				<div id="site-header-menu" class="site-header-menu">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 				</div>
 				<div id="search-container-wrapper" class="search-container-wrapper">
 					<div class="search-toggle">
 						<div class="search-icon"><i class="fa fa-search"></i></div>
-						<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'elegance' ); ?></a>
+						<a href="#search-container" class="screen-reader-text"><?php _e('Search', 'elegance'); ?></a>
 					</div>
 					<div id="search-container" class="search-box-wrapper">
 						<div class="search-box">
@@ -51,7 +53,8 @@
 					</div>
 				</div>
 			</div>
-		</nav><!-- #site-navigation -->
+			</nav><!-- #site-navigation -->
+		<?php endif ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
