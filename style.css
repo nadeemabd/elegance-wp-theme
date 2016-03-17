@@ -778,7 +778,7 @@ a:hover, a:active {
   content: "";
 }
 .social-navigation a[href*="vimeo.com"]:hover {
-  color: ##17B3E8;
+  color: #17B3E8;
 }
 .social-navigation a[href*="wordpress.com"]:before {
   content: "";
