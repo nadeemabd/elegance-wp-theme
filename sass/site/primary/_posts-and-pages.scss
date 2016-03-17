@@ -90,7 +90,8 @@ body.page {
 .logged-in-as,
 .comment-content,
 .pingback .comment-body,
-.textwidget {
+.textwidget,
+.error-content {
 	//	margin: 0 60px;
 	a {
 		color: $brand-color-4;
