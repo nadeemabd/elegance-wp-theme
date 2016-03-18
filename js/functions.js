@@ -78,7 +78,7 @@
 
 		// Toggle `focus` class to allow submenu access on tablets.
 		function toggleFocusClassTouchScreen() {
-			if ( window.innerWidth >= 910 ) {
+			if ( window.innerWidth >= 900 ) {
 				$( document.body ).on( 'touchstart.elegance', function( e ) {
 					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
 						$( '.main-navigation li' ).removeClass( 'focus' );
@@ -110,14 +110,14 @@
 
 	// Add the default ARIA attributes for the menu toggle and the navigations.
 	function onResizeARIA() {
-		if ( window.innerWidth < 910 ) {
-			if ( menuToggle.hasClass( 'toggled-on' ) ) {
+		if ( window.innerWidth < 900 ) {
+			if ( menuToggle.hasClass( 'toggled' ) ) {
 				menuToggle.attr( 'aria-expanded', 'true' );
 			} else {
 				menuToggle.attr( 'aria-expanded', 'false' );
 			}
 
-			if ( siteHeaderMenu.hasClass( 'toggled-on' ) ) {
+			if ( siteHeaderMenu.hasClass( 'toggled' ) ) {
 				siteNavigation.attr( 'aria-expanded', 'true' );
 				socialNavigation.attr( 'aria-expanded', 'true' );
 			} else {
@@ -131,6 +131,10 @@
 			siteNavigation.removeAttr( 'aria-expanded' );
 			socialNavigation.removeAttr( 'aria-expanded' );
 			menuToggle.removeAttr( 'aria-controls' );
+			if ( siteHeaderMenu.hasClass( 'toggled' ) ) {
+				$(this).add(siteHeaderMenu).removeClass('toggled');
+				$(this).add(menuToggle).removeClass('toggled');
+			}
 		}
 	}
 

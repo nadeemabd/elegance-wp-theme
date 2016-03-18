@@ -10,19 +10,19 @@ module.exports = function (grunt) {
 						dev: {
 								options: {
 										style: 'expanded',
-										sourcemap: 'none'
+										sourcemap: 'file'
 								},
 								files: {
-										'compiled/style-expanded.css': 'sass/style.scss'
+										'style-expanded.css': 'sass/style.scss'
 								}
 						},
 						dist: {
 								options: {
 										style: 'expanded',
-										sourcemap: 'none'
+										sourcemap: 'file'
 								},
 								files: {
-										'compiled/style.css': 'sass/style.scss'
+										'style.css': 'sass/style.scss'
 								}
 						}
 				},
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 						multiple_files: {
 								expand: true,
 								flatten: true,
-								src: 'compiled/*.css',
+								src: '*.css',
 								dest: ''
 						}
 				},
