@@ -1,116 +1,73 @@
 /* Styles for mobile menu*/
-
-.main-navigation {
-	width: 100%;
-	//	background-color: yellow;
-	.site-header-wrapper {
-		display: flex;
-		max-width: 90%;
-		margin: 0 auto;
-		justify-content: space-between;
-		position: relative;
-		flex-flow: row wrap;
-		//		background-color: $color__navigation-background;
-	}
-	.site-header-menu {
-		order: 3;
-		flex: 1 100%;
-	}
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-		ul {
-			display: none;
-		}
-	}
-	li {
-		position: relative;
-		&:hover > a,
-		&.focus > a {
-			background-color: $color__navigation-link-bg-hover;
-			//			color: yellow;
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-		padding: .6em;
-		color: $color__navigation-link-text;
-	}
-}
 .menu-toggle,
 .site-header-menu.toggled .menu {
-	display: block;
-	.toggled {
-		display: block;
-	}
+  display: block;
+  .toggled {
+    display: block;
+  }
 }
-.menu-toggle {
-	order: 1;
+
+.dropdown-toggle {
+  width: 48px;
+  background: none;
+  &:focus {
+    color: $light;
+    background: none;
+  }
+  &:hover {
+    background: none;
+    color: $brand-color-4;
+  }
+  &:after {
+    content: '\f106';
+    font-family: FontAwesome;
+    font-size: 24px;
+  }
+  &.toggled:after {
+    content: '\f107';
+    color: $brand-color-4;
+  }
+
 }
-// screen width >= 600px
-@media screen and (min-width: 37.5em) {}
-// screen width >= 910px
-@media screen and (min-width: 56.875em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation {
-		.site-header-wrapper {
-			flex-wrap: nowrap;
-		}
-		.site-header-menu {
-			order: 1;
-			flex: 0 0 auto;
-		}
-		ul {
-			display: flex;
-			ul {
-				background-color: $color__navigation-sublink-bg;
-				position: absolute;
-				z-index: 99999;
-				//				display: none;
-				flex-wrap: wrap;
-				justify-content: space-between;
-				ul {
-					top: 0;
-				}
-				li {
-					&:hover > ul,
-					&.focus > ul {
-						display: flex;
-						left: 100%;
-					}
-				}
-				a {
-					width: 200px;
-				}
-				:hover > a,
-				.focus > a {
-					background-color: $color__navigation-sublink-bg-hover;
-				}
-				a:hover,
-				a.focus {
-					background-color: $color__navigation-sublink-bg-hover;
-				}
-			}
-			li:hover > ul,
-			li.focus > ul {
-				display: flex;
-			}
-		}
-	}
-	.dropdown-toggle {
-		display: none;
-	}
-}
-// screen width >= 1600px
-@media screen and (min-width: 100em) {
-	.main-navigation {
-		.site-header-wrapper {
-			max-width: 80%;
-		}
-	}
+
+.main-navigation {
+  width: 100%;
+  //	background-color: yellow;
+  .site-header-wrapper {
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+  }
+  .site-header-menu {
+    order: 3;
+    flex: 1 100%;
+  }
+  ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    ul {
+      display: none;
+    }
+  }
+  li {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  a {
+    flex: 1 0 auto;
+    display: block;
+    text-decoration: none;
+    padding: .6em;
+    color: $color__navigation-link-text;
+    &:hover,
+    &:focus {
+      background-color: $color__navigation-link-bg-hover;
+    }
+  }
 }

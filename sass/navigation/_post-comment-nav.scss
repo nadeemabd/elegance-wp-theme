@@ -12,7 +12,6 @@
   .nav-previous {
     background-color: $light;
     padding: 2em;
-    border-top: 1px solid #ccc;
     &:after {
       @include clearfix;
       @include clearfix-after;
@@ -25,7 +24,6 @@
     text-align: right;
     background-color: $light;
     padding: 2em;
-    border-top: 1px solid #ccc;
     &:before, &:after {
       @include clearfix;
       @include clearfix-after;
@@ -36,7 +34,11 @@
   }
 }
 .post-navigation {
-  span {
+  .nav-previous,
+  .nav-next {
+    border-top: 1px solid #ccc;
+  }
+    span {
     display: block;
   }
   .meta-nav {
@@ -76,20 +78,5 @@
       color: $light;
     }
   }
-}
-@media screen and (min-width: 900px) {
-  .comment-navigation,
-  .post-navigation {
-    .nav-links {
-      display: flex;
-    }
-    .nav-previous, .nav-next {
-      flex: 1 0 auto;
-    }
-  }
-}
-@media screen and (min-width: 1280px) {
-  .pagination {
-    margin-bottom: 0;
-  }
+
 }
