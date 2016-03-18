@@ -822,6 +822,37 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 /* Styles for mobile menu*/
+.menu-toggle,
+.site-header-menu.toggled .menu {
+  display: block;
+}
+.menu-toggle .toggled,
+.site-header-menu.toggled .menu .toggled {
+  display: block;
+}
+
+.dropdown-toggle {
+  width: 48px;
+  background: none;
+}
+.dropdown-toggle:focus {
+  color: #fff;
+  background: none;
+}
+.dropdown-toggle:hover {
+  background: none;
+  color: #45CEBE;
+}
+.dropdown-toggle:after {
+  content: '\f106';
+  font-family: FontAwesome;
+  font-size: 24px;
+}
+.dropdown-toggle.toggled:after {
+  content: '\f107';
+  color: #45CEBE;
+}
+
 .main-navigation {
   width: 100%;
 }
@@ -858,33 +889,62 @@ a:hover, a:active {
 }
 .main-navigation li {
   position: relative;
-}
-.main-navigation li:hover > a, .main-navigation li.focus > a {
-  background-color: #303B57;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .main-navigation a {
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   display: block;
   text-decoration: none;
   padding: .6em;
-  color: #ccc;
+  color: #fff;
+}
+.main-navigation a:hover, .main-navigation a:focus {
+  background-color: #303B57;
 }
 
-.menu-toggle,
-.site-header-menu.toggled .menu {
-  display: block;
-}
-.menu-toggle .toggled,
-.site-header-menu.toggled .menu .toggled {
-  display: block;
-}
+@media screen and (max-width: 899px) {
+  .menu-toggle {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .menu-toggle:focus {
+    background: none;
+  }
+  .menu-toggle:hover, .menu-toggle.toggled {
+    border: 2px solid #45CEBE;
+    background-color: #45CEBE;
+  }
 
-.menu-toggle {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
-}
+  .main-navigation li {
+    border-top: 2px solid #303B57;
+  }
 
-@media screen and (min-width: 56.875em) {
+  .sub-menu li {
+    border-top: 2px solid rgba(69, 206, 190, 0.5);
+    margin-left: 1em;
+  }
+  .sub-menu.toggled {
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+}
+@media screen and (min-width: 900px) {
   .menu-toggle {
     display: none;
   }
@@ -908,7 +968,6 @@ a:hover, a:active {
     display: flex;
   }
   .main-navigation ul ul {
-    background-color: #303B57;
     position: absolute;
     z-index: 99999;
     -webkit-flex-wrap: wrap;
@@ -917,6 +976,7 @@ a:hover, a:active {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    background-color: #303B57;
   }
   .main-navigation ul ul ul {
     top: 0;
@@ -938,18 +998,39 @@ a:hover, a:active {
   .main-navigation ul ul a.focus {
     background-color: #3F4D69;
   }
+  .main-navigation ul ul .menu-item-has-children > a:after {
+    content: '\f105';
+    font-family: FontAwesome;
+    float: right;
+  }
   .main-navigation ul li:hover > ul,
   .main-navigation ul li.focus > ul {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
+  .main-navigation ul .menu-item-has-children > a:after {
+    content: '\f107';
+    font-family: FontAwesome;
+    padding-left: 10px;
+  }
+  .main-navigation li {
+    display: block;
+    border-top: none;
+  }
+  .main-navigation li:hover > a, .main-navigation li.focus > a {
+    background-color: #303B57;
+  }
 
   .dropdown-toggle {
     display: none;
   }
+
+  .sub-menu li {
+    padding-left: 0;
+  }
 }
-@media screen and (min-width: 100em) {
+@media screen and (min-width: 1600px) {
   .main-navigation .site-header-wrapper {
     max-width: 80%;
   }
@@ -1068,6 +1149,9 @@ a:hover, a:active {
   background-color: #45CEBE;
   color: #fff;
 }
+.infinite-scroll .pagination {
+  display: none;
+}
 
 @media screen and (min-width: 900px) {
   .comment-navigation .nav-links,
@@ -1127,9 +1211,9 @@ a:hover, a:active {
   display: flex;
 }
 .search-form label {
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  -webkit-flex: 0 1 100%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1158,7 +1242,7 @@ a:hover, a:active {
   cursor: pointer;
 }
 .search-toggle .search-icon i {
-  color: #ccc;
+  color: #fff;
 }
 .search-toggle .search-icon:hover {
   background-color: #3F4D69;
@@ -1609,6 +1693,7 @@ body.page .entry-title {
 }
 .site-main #infinite-handle {
   text-align: center;
+  margin-bottom: 3em;
 }
 .site-main #infinite-handle span {
   background: transparent;
