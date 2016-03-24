@@ -6,6 +6,16 @@
 		color: $light;
 	}
 }
+
+.header-image {
+	display: flex;
+	justify-content: center;
+	//margin-top: -9em;
+	//z-index: -1;
+	//position: relative;
+	margin-bottom: 1.5em;
+}
+
 @media screen and (min-width: 1600px) {
 	.site-branding {
 		max-width: 80%;
