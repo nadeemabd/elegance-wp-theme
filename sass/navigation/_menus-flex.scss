@@ -93,14 +93,14 @@
     li {
       border-top: 2px solid #303B57;
     }
-  }
-  .sub-menu {
-    li {
-      border-top: 2px solid rgba(69, 206, 190, 0.5);
-      margin-left: 1em;
-    }
-    &.toggled {
-      flex: 1 0 100%;
+    .sub-menu {
+      li {
+        border-top: 2px solid rgba(69, 206, 190, 0.5);
+        margin-left: 1em;
+      }
+      &.toggled {
+        flex: 1 0 100%;
+      }
     }
   }
 }
@@ -131,6 +131,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         background-color: $color__navigation-sublink-bg;
+        //box-shadow: 1px 2px 2px rgba(0,0,0,.8);
         ul {
           top: 0;
         }
@@ -178,6 +179,7 @@
       &:hover > a,
       &.focus > a {
         background-color: $color__navigation-link-bg-hover;
+        //box-shadow: 1px 2px 2px rgba(0,0,0,.8);
       }
     }
   }
