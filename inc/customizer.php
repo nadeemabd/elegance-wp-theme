@@ -527,7 +527,8 @@ function elegance_get_color_scheme_css($colors)
 	input[type="reset"],
 	input[type="submit"],
 	.tagcloud a:hover,
-	.tagcloud a:focus {
+	.tagcloud a:focus,
+    .sticky-post {
 	  color: {$colors['page_background_color']};
 	}
 
@@ -538,6 +539,46 @@ function elegance_get_color_scheme_css($colors)
     .search-container-wrapper .search-toggle.active {
       	  background: {$colors['menu_hover_color']};
     }
+
+	/* Main Text Color */
+	body,
+	a,
+	a:visited,
+	button,
+	select,
+	textarea,
+	input,
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="number"],
+	.site-footer,
+	.error-content,
+	.page-content,
+	.menu-toggle:hover,
+	.menu-toggle.toggled {
+		color: {$colors['main_text_color']};
+	}
+
+	.menu-toggle.toggled-on,
+	.menu-toggle.toggled-on:hover,
+	.menu-toggle.toggled-on:focus,
+	.comments-title,
+	ol.comment-list > .comment {
+		border-color: {$colors['main_text_color']};
+	}
+
+	div.sharedaddy h3.sd-title::before {
+        border-color: {$colors['main_text_color']} !important;
+	}
+
+	li.comment .children > li::before {
+	    border-left-color: {$colors['main_text_color']};
+	}
+
 
 	/* Link Color */
 	button,
@@ -551,7 +592,8 @@ function elegance_get_color_scheme_css($colors)
 	.widget ol ul > li:hover::before,
 	.pagination .page-numbers.current,
 	.menu-toggle:hover,
-	.menu-toggle.toggled {
+	.menu-toggle.toggled,
+	.sticky-post {
         background: {$colors['link_color']};
 	}
 
@@ -638,45 +680,6 @@ function elegance_get_color_scheme_css($colors)
 		border-color: {$colors['link_color']};
 	}
 
-	/* Main Text Color */
-	body,
-	a,
-	a:visited,
-	button,
-	select,
-	textarea,
-	input,
-	input[type="text"],
-	input[type="email"],
-	input[type="url"],
-	input[type="password"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="number"],
-	.site-footer,
-	.error-content,
-	.page-content,
-	.menu-toggle:hover,
-	.menu-toggle.toggled {
-		color: {$colors['main_text_color']};
-	}
-
-	.menu-toggle.toggled-on,
-	.menu-toggle.toggled-on:hover,
-	.menu-toggle.toggled-on:focus,
-	.comments-title,
-	ol.comment-list > .comment {
-		border-color: {$colors['main_text_color']};
-	}
-
-	div.sharedaddy h3.sd-title::before {
-        border-color: {$colors['main_text_color']} !important;
-	}
-
-	li.comment .children > li::before {
-	    border-left-color: {$colors['main_text_color']};
-	}
-
 	/* Secondary Text Color */
 
 	/**
@@ -692,7 +695,6 @@ function elegance_get_color_scheme_css($colors)
 	.post-navigation .meta-nav,
 	.widget,
 	.entry-footer,
-	.sticky-post,
 	.entry-caption,
 	.comment-metadata,
 	.comment-metadata a,
@@ -873,7 +875,8 @@ function elegance_page_background_color_css()
         input[type="reset"],
         input[type="submit"],
         .tagcloud a:hover,
-	    .tagcloud a:focus {
+	    .tagcloud a:focus,
+        .sticky-post {
           color: %1$s;
         }
 	';
@@ -1010,7 +1013,8 @@ function elegance_link_color_css()
 	    .widget ol ul > li:hover::before,
 	    .pagination .page-numbers.current,
         .menu-toggle:hover,
-	    .menu-toggle.toggled {
+	    .menu-toggle.toggled,
+	    .sticky-post {
             background: %1$s;
         }
 
@@ -1265,7 +1269,6 @@ function elegance_secondary_text_color_css()
         .post-navigation .meta-nav,
         .widget,
         .entry-footer,
-        .sticky-post,
         .entry-caption,
         .comment-metadata,
         .comment-metadata a,
