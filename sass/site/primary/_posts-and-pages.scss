@@ -134,6 +134,7 @@ body.page {
 }
 .page-content {
 	color: $light;
+	margin-bottom: 3em;
 }
 @media screen and (min-width: 600px) {
 	body.single,
@@ -211,4 +212,12 @@ body.page {
 
 .wp-audio-shortcode a {
 	border-bottom: none;
+}
+
+.post-password-form {
+	//display: flex;
+	label {
+		display: block;
+		margin-bottom: .5em;
+	}
 }
