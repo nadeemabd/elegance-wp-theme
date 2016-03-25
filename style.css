@@ -331,7 +331,7 @@ h4 {
 }
 @media screen and (min-width: 37.5em) {
   h4 {
-    font-size: 22.5px;
+    font-size: 22px;
     font-size: 2.25rem;
   }
 }
@@ -342,7 +342,7 @@ h5 {
 }
 @media screen and (min-width: 37.5em) {
   h5 {
-    font-size: 15.75px;
+    font-size: 15px;
     font-size: 1.575rem;
   }
 }
@@ -353,7 +353,7 @@ h6 {
 }
 @media screen and (min-width: 37.5em) {
   h6 {
-    font-size: 13.5px;
+    font-size: 13px;
     font-size: 1.35rem;
   }
 }
@@ -393,7 +393,7 @@ pre {
 }
 @media screen and (min-width: 37.5em) {
   pre {
-    font-size: 16.875px;
+    font-size: 16px;
     font-size: 1.6875rem;
   }
 }
@@ -411,7 +411,7 @@ var {
   kbd,
   tt,
   var {
-    font-size: 16.875px;
+    font-size: 16px;
     font-size: 1.6875rem;
   }
 }
@@ -460,7 +460,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 
 blockquote {
-  font-size: 21.28px;
+  font-size: 21px;
   font-size: 2.128rem;
   color: #888;
   padding-left: 1.5em;
@@ -469,7 +469,7 @@ blockquote {
 }
 @media screen and (min-width: 37.5em) {
   blockquote {
-    font-size: 23.94px;
+    font-size: 23px;
     font-size: 2.394rem;
   }
 }
@@ -559,7 +559,7 @@ input[type="submit"] {
   input[type="button"],
   input[type="reset"],
   input[type="submit"] {
-    font-size: 13.5px;
+    font-size: 13px;
     font-size: 1.35rem;
   }
 }
@@ -806,7 +806,7 @@ a:hover, a:active {
 }
 @media screen and (min-width: 37.5em) {
   .social-navigation a:before {
-    font-size: 20.25px;
+    font-size: 20px;
     font-size: 2.025rem;
   }
 }
@@ -1095,7 +1095,7 @@ a:hover, a:active {
 }
 @media screen and (min-width: 37.5em) {
   .post-navigation .meta-nav {
-    font-size: 15.75px;
+    font-size: 15px;
     font-size: 1.575rem;
   }
 }
@@ -1105,7 +1105,7 @@ a:hover, a:active {
 }
 @media screen and (min-width: 37.5em) {
   .post-navigation .post-title {
-    font-size: 24.75px;
+    font-size: 24px;
     font-size: 2.475rem;
   }
 }
@@ -1139,7 +1139,7 @@ a:hover, a:active {
 @media screen and (min-width: 37.5em) {
   .pagination .prev.page-numbers,
   .pagination .next.page-numbers {
-    font-size: 15.75px;
+    font-size: 15px;
     font-size: 1.575rem;
   }
 }
@@ -1318,7 +1318,7 @@ a:hover, a:active {
 }
 @media screen and (min-width: 37.5em) {
   .says:focus, .screen-reader-text:focus {
-    font-size: 15.75px;
+    font-size: 15px;
     font-size: 1.575rem;
   }
 }
@@ -1367,14 +1367,14 @@ a:hover, a:active {
   padding: 24px;
   box-shadow: 0 25px 30px rgba(0, 0, 0, 0.4);
   color: #7e7e7e;
-  font-size: 14.08px;
+  font-size: 14px;
   font-size: 1.408rem;
   /* Make sure select elements fit in widgets. */
   /* Search widget. */
 }
 @media screen and (min-width: 37.5em) {
   .widget {
-    font-size: 15.84px;
+    font-size: 15px;
     font-size: 1.584rem;
   }
 }
@@ -1561,6 +1561,7 @@ a:hover, a:active {
 .entry-header .cat-links,
 .entry-header .entry-meta {
   margin-left: 5px;
+  display: block;
 }
 
 .entry-title {
@@ -1652,12 +1653,12 @@ body.page .entry-title {
 }
 
 .page-title {
-  font-size: 38.4px;
+  font-size: 38px;
   font-size: 3.84rem;
 }
 @media screen and (min-width: 37.5em) {
   .page-title {
-    font-size: 43.2px;
+    font-size: 43px;
     font-size: 4.32rem;
   }
 }
@@ -1753,6 +1754,26 @@ body.page .entry-title {
   margin-bottom: .5em;
 }
 
+.sticky-post-wrapper {
+  margin-bottom: .6em;
+}
+
+.sticky-post {
+  padding: 0 .6em;
+  background-color: #45CEBE;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 37.5em) {
+  .sticky-post {
+    font-size: 13px;
+    font-size: 1.35rem;
+  }
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1787,7 +1808,7 @@ body.page .entry-title {
 }
 @media screen and (min-width: 37.5em) {
   .comments-title {
-    font-size: 40.5px;
+    font-size: 40px;
     font-size: 4.05rem;
   }
 }
@@ -1837,7 +1858,7 @@ ol.comment-list .trackback:last-child {
 @media screen and (min-width: 37.5em) {
   .comment-metadata,
   .pingback .edit-link {
-    font-size: 15.75px;
+    font-size: 15px;
     font-size: 1.575rem;
   }
 }
@@ -1920,7 +1941,7 @@ li.comment .children > li:before {
 }
 @media screen and (min-width: 37.5em) {
   .site-footer {
-    font-size: 14.625px;
+    font-size: 14px;
     font-size: 1.4625rem;
   }
 }
@@ -2096,7 +2117,7 @@ object {
 }
 @media screen and (min-width: 37.5em) {
   .wp-caption-text {
-    font-size: 15.75px;
+    font-size: 15px;
     font-size: 1.575rem;
   }
 }
