@@ -19,6 +19,11 @@
 	?>
 
 	<header class="entry-header">
+
+		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+			<div class="sticky-post-wrapper"><span class="sticky-post"><?php _e( 'Featured', 'elegance' ); ?></span></div>
+		<?php endif; ?>
+
 		<?php
 
 		$categories_list = get_the_category_list( esc_html__( ', ', 'elegance' ) );
