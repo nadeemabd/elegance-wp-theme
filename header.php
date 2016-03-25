@@ -25,7 +25,7 @@
 
     <header id="masthead" class="site-header" role="banner">
 
-        <?php if ( get_header_image() ) : ?>
+        <?php if ( get_header_image() && !is_404()) : ?>
             <?php
             /**
              * Filter the default elegance custom header sizes attribute.
@@ -54,11 +54,27 @@
         <?php if (!is_404()): ?>
             <nav id="site-navigation" class="main-navigation" role="navigation">
                 <div class="site-header-wrapper">
+
+            <?php if (has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ): ?>
                     <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu"
                             aria-expanded="false"><?php esc_html_e('Menu', 'elegance'); ?></button>
                     <div id="site-header-menu" class="site-header-menu">
+<!--                --><?php //if ( has_nav_menu( 'primary' ) ) : ?>
                         <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
+<!--                --><?php //endif ?>
+<!--                --><?php //if ( has_nav_menu( 'social' ) ) : ?>
+<!--                       --><?php //wp_nav_menu( array(
+//                        'theme_location' => 'social',
+//                        'menu_class'     => 'social-links-menu',
+//                        'menu_id'        => 'social-menu',
+//                        'depth'          => 1,
+//                        'link_before'    => '<span class="screen-reader-text">',
+//										'link_after'     => '</span>',
+//                        ) ); ?>
+<!--                --><?php //endif ?>
                     </div>
+
+            <?php endif ?>
                     <div id="search-container-wrapper" class="search-container-wrapper">
                         <div class="search-toggle">
                             <div class="search-icon"><i class="fa fa-search"></i></div>

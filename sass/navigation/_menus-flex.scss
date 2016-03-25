@@ -39,7 +39,6 @@
     margin: 0 auto;
     justify-content: space-between;
     position: relative;
-    flex-flow: row wrap;
   }
   .site-header-menu {
     order: 3;
@@ -90,6 +89,9 @@
     }
   }
   .main-navigation {
+    .site-header-wrapper {
+      flex-flow: row wrap;
+    }
     li {
       border-top: 2px solid #303B57;
     }
@@ -116,14 +118,15 @@
   }
   .main-navigation {
     .site-header-wrapper {
-      flex-wrap: nowrap;
+      //flex-wrap: nowrap;
     }
     .site-header-menu {
       order: 1;
-      flex: 0 0 auto;
+      flex: 0 1 75%;
     }
     ul {
       display: flex;
+      flex-wrap: wrap;
       ul {
         position: absolute;
         z-index: 99999;
