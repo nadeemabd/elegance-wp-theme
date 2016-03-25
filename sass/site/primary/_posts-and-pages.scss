@@ -55,6 +55,7 @@
 		.cat-links,
 		.entry-meta {
 			margin-left: 5px;
+			display: block;
 		}
 	}
 	.entry-title {
@@ -220,4 +221,15 @@ body.page {
 		display: block;
 		margin-bottom: .5em;
 	}
+}
+.sticky-post-wrapper {
+	margin-bottom: .6em;
+}
+.sticky-post {
+	padding: 0 .6em;
+	background-color: $brand-color-4;
+	text-transform: uppercase;
+	letter-spacing: .25em;
+	@include font-size(.75);
+	font-weight: 700;
 }
