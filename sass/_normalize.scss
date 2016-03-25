@@ -71,7 +71,6 @@ dfn {
 
 mark {
 	background: #ff0;
-	color: #000;
 }
 
 small {
@@ -131,6 +130,7 @@ textarea {
 	color: inherit;
 	font: inherit;
 	margin: 0;
+	outline: 0;
 }
 
 button {

@@ -71,6 +71,17 @@ ol.comment-list {
 .comment-respond {
 	padding: 3em 3em 1em;
 }
+.comment-navigation {
+	border-bottom: 1px solid #ccc;
+}
+
+.no-comments {
+	text-align: center;
+	padding: 1em;
+	//background: blue;
+	//color: #fff;
+}
+
 li.comment .children {
 	margin-left: 0;
 	> li {
