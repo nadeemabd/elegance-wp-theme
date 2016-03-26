@@ -33,17 +33,7 @@
 		display: flex;
 	}
 }
-@media screen and (min-width: 1280px) {
-	.search-container-wrapper {
-		display: flex;
-		flex-direction: row-reverse;
-		flex: 1 0 25%;
-	}
-	.search-box-wrapper {
-		position: inherit;
-		max-width: 500px;
-	}
-}
+
 .search-toggle {
 	height: 50px;
 	.search-icon {

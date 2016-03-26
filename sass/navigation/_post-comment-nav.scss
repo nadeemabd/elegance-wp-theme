@@ -78,23 +78,5 @@
       color: $light;
     }
   }
-  .infinite-scroll & {
-    display: none;
-  }
-}
-@media screen and (min-width: 900px) {
-  .comment-navigation,
-  .post-navigation {
-    .nav-links {
-      display: flex;
-    }
-    .nav-previous, .nav-next {
-      flex: 1 0 auto;
-    }
-  }
-}
-@media screen and (min-width: 1280px) {
-  .pagination {
-    margin-bottom: 0;
-  }
+
 }

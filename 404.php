@@ -9,26 +9,27 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-			<section class="error-404 not-found">
+        <section class="error-404 not-found">
 
-				<div class="page-content">
-					<div class="error-content">
-						<h1 class="error-header">404</h1>
-						<p><?php esc_html_e( 'Lost? Maybe try a search? Go ', 'elegance' ); ?>
-							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">home</a>
-							<?php esc_html_e( ' maybe?', 'elegance' ); ?>
-						</p>
+            <div class="page-content">
+                <div class="error-content">
+                    <h1 class="error-header">404</h1>
 
-						<?php get_search_form(); ?>
+                    <p><?php esc_html_e('Lost? Maybe try a search? Go ', 'elegance'); ?>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">home</a>
+                        <?php esc_html_e(' maybe?', 'elegance'); ?>
+                    </p>
 
-					</div><!-- .error-content -->
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+                    <?php get_search_form(); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+                </div><!-- .error-content -->
+            </div><!-- .page-content -->
+        </section><!-- .error-404 -->
+
+    </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -10,43 +10,45 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-		// Post thumbnail.
-		if ( has_post_thumbnail() ) {
-			printf( '<div class="hero-image">' . the_post_thumbnail('elegance-hero-image') .	'</div>');
-		}
-	?>
+    <?php
+    // Post thumbnail.
+    if (has_post_thumbnail()) {
+        printf('<div class="hero-image">' . the_post_thumbnail('elegance-hero-image') . '</div>');
+    }
+    ?>
 
-	<header class="entry-header">
-		<?php
+    <header class="entry-header">
 
-		$categories_list = get_the_category_list( esc_html__( ', ', 'elegance' ) );
-		if ( $categories_list && elegance_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( ' %1$s', 'elegance' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+        <?php
 
-		?>
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        $categories_list = get_the_category_list(esc_html__(', ', 'elegance'));
+        if ($categories_list && elegance_categorized_blog()) {
+            printf('<span class="cat-links">' . esc_html__(' %1$s', 'elegance') . '</span>', $categories_list); // WPCS: XSS OK.
+        }
 
-		<div class="entry-meta">
-			<?php elegance_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+        ?>
+        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'elegance' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+        <div class="entry-meta">
+            <?php elegance_posted_on(); ?>
+        </div><!-- .entry-meta -->
 
-	<footer class="entry-footer">
-		<?php elegance_entry_footer(); ?>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
+        <?php the_content(); ?>
+        <?php
+        wp_link_pages(array(
+            'before' => '<div class="page-links">' . esc_html__('Pages:', 'elegance'),
+            'after' => '</div>',
+        ));
+        ?>
+    </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <?php elegance_entry_footer(); ?>
 
 
-	</footer><!-- .entry-footer -->
+    </footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

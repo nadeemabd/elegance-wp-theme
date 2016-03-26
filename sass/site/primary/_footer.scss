@@ -35,18 +35,3 @@
     order: 3;
   }
 }
-
-@media screen and (min-width: 900px) {
-  .site-footer {
-    width: 80%;
-    .site-info {
-      order: 1;
-    }
-    .theme-info {
-      order: 3;
-    }
-    .social-navigation {
-      order: 2;
-    }
-  }
-}
