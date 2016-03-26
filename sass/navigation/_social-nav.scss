@@ -53,12 +53,3 @@ $links: ('500px.com' '\f26e' '#0099e5'),
     }
   }
 }
-
-@media screen and (min-width: 1600px) {
-  .social-navigation {
-    //flex-basis: 20%;
-    ul {
-      justify-content: space-between;
-    }
-  }
-}

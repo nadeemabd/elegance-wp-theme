@@ -63,116 +63,113 @@ function elegance_customize_register($wp_customize)
 
     // Add color scheme setting and control.
     $wp_customize->add_setting('color_scheme', array(
-        'default' => 'default',
+        'default'           => 'default',
         'sanitize_callback' => 'elegance_sanitize_color_scheme',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control('color_scheme', array(
-        'label' => __('Base Color Scheme', 'elegance'),
-        'section' => 'colors',
-        'type' => 'select',
-        'choices' => elegance_get_color_scheme_choices(),
-        'priority' => 1,
+        'label'     => __('Base Color Scheme', 'elegance'),
+        'section'   => 'colors',
+        'type'      => 'select',
+        'choices'   => elegance_get_color_scheme_choices(),
+        'priority'  => 1,
     ));
 
     // Add page background color setting and control.
     $wp_customize->add_setting('page_background_color', array(
-        'default' => $color_scheme[1],
+        'default'           => $color_scheme[1],
         'sanitize_callback' => 'sanitize_hex_color',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'page_background_color', array(
-        'label' => __('Page Background Color', 'elegance'),
-        'section' => 'colors',
+        'label'     => __('Page Background Color', 'elegance'),
+        'section'   => 'colors',
     )));
 
     // Add menu hover background color setting and control.
     $wp_customize->add_setting('menu_hover_color', array(
-        'default' => $color_scheme[2],
+        'default'           => $color_scheme[2],
         'sanitize_callback' => 'sanitize_hex_color',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'menu_hover_color', array(
-        'label' => __('Menu Hover Background Color', 'elegance'),
-        'section' => 'colors',
+        'label'     => __('Menu Hover Background Color', 'elegance'),
+        'section'   => 'colors',
     )));
 
     // Add submenu hover background color setting and control.
     $wp_customize->add_setting('submenu_hover_color', array(
-        'default' => $color_scheme[3],
+        'default'           => $color_scheme[3],
         'sanitize_callback' => 'sanitize_hex_color',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'submenu_hover_color', array(
-        'label' => __('Submenu Hover Background Color', 'elegance'),
-        'section' => 'colors',
+        'label'     => __('Submenu Hover Background Color', 'elegance'),
+        'section'   => 'colors',
     )));
-
-    // Remove the core header textcolor control, as it shares the main text color.
-//	$wp_customize->remove_control( 'header_textcolor' );
 
     // Add link color setting and control.
     $wp_customize->add_setting('link_color', array(
-        'default' => $color_scheme[4],
+        'default'           => $color_scheme[4],
         'sanitize_callback' => 'sanitize_hex_color',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'link_color', array(
-        'label' => __('Link Color', 'elegance'),
-        'section' => 'colors',
+        'label'     => __('Link Color', 'elegance'),
+        'section'   => 'colors',
     )));
 
     // Add main text color setting and control.
     $wp_customize->add_setting('main_text_color', array(
-        'default' => $color_scheme[5],
+        'default'           => $color_scheme[5],
         'sanitize_callback' => 'sanitize_hex_color',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'main_text_color', array(
-        'label' => __('Main Text Color', 'elegance'),
-        'section' => 'colors',
+        'label'     => __('Main Text Color', 'elegance'),
+        'section'   => 'colors',
     )));
 
     // Add secondary text color setting and control.
     $wp_customize->add_setting('secondary_text_color', array(
-        'default' => $color_scheme[6],
+        'default'           => $color_scheme[6],
         'sanitize_callback' => 'sanitize_hex_color',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'secondary_text_color', array(
-        'label' => __('Secondary Text Color', 'elegance'),
-        'section' => 'colors',
+        'label'     => __('Secondary Text Color', 'elegance'),
+        'section'   => 'colors',
     )));
 
     // Add navigation text color setting and control.
     $wp_customize->add_setting('navigation_text_color', array(
-        'default' => $color_scheme[7],
+        'default'           => $color_scheme[7],
         'sanitize_callback' => 'sanitize_hex_color',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'navigation_text_color', array(
-        'label' => __('Navigation Text Color', 'elegance'),
-        'section' => 'colors',
+        'label'     => __('Navigation Text Color', 'elegance'),
+        'section'   => 'colors',
     )));
 
     // Add navigation text color setting and control.
     $wp_customize->add_setting('navigation_text_hover_color', array(
-        'default' => $color_scheme[8],
+        'default'           => $color_scheme[8],
         'sanitize_callback' => 'sanitize_hex_color',
-        'transport' => 'postMessage',
+        'transport'         => 'postMessage',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'navigation_text_hover_color', array(
-        'label' => __('Navigation Text Hover Color', 'elegance'),
-        'section' => 'colors',
+        'label'     => __('Navigation Text Hover Color', 'elegance'),
+        'section'   => 'colors',
     )));
 }
 
@@ -416,18 +413,18 @@ function elegance_color_scheme_css()
 
     // If we get this far, we have a custom color scheme.
     $colors = array(
-        'background_color' => $color_scheme[0],
-        'page_background_color' => $color_scheme[1],
-        'menu_hover_color' => $color_scheme[2],
-        'submenu_hover_color' => $color_scheme[3],
-        'link_color' => $color_scheme[4],
-        'main_text_color' => $color_scheme[5],
-        'secondary_text_color' => $color_scheme[6],
-        'navigation_text_color' => $color_scheme[7],
-        'navigation_text_hover_color' => $color_scheme[8],
-        'header_textcolor' => $color_scheme[9],
-        'color_link_hover_color' => vsprintf('rgba( %1$s, %2$s, %3$s, 0.8)', $color_linkcolor_rgb),
-        'border_color' => vsprintf('rgba( %1$s, %2$s, %3$s, 0.2)', $color_textcolor_rgb),
+        'background_color'              => $color_scheme[0],
+        'page_background_color'         => $color_scheme[1],
+        'menu_hover_color'              => $color_scheme[2],
+        'submenu_hover_color'           => $color_scheme[3],
+        'link_color'                    => $color_scheme[4],
+        'main_text_color'               => $color_scheme[5],
+        'secondary_text_color'          => $color_scheme[6],
+        'navigation_text_color'         => $color_scheme[7],
+        'navigation_text_hover_color'   => $color_scheme[8],
+        'header_textcolor'              => $color_scheme[9],
+        'color_link_hover_color'        => vsprintf('rgba( %1$s, %2$s, %3$s, 0.8)', $color_linkcolor_rgb),
+        'border_color'                  => vsprintf('rgba( %1$s, %2$s, %3$s, 0.2)', $color_textcolor_rgb),
 
     );
 
@@ -477,18 +474,18 @@ add_action('customize_preview_init', 'elegance_customize_preview_js');
 function elegance_get_color_scheme_css($colors)
 {
     $colors = wp_parse_args($colors, array(
-        'background_color' => '',
-        'page_background_color' => '',
-        'menu_hover_color' => '',
-        'submenu_hover_color' => '',
-        'link_color' => '',
-        'main_text_color' => '',
-        'secondary_text_color' => '',
-        'navigation_text_color' => '',
-        'navigation_text_hover_color' => '',
-        'header_textcolor' => '',
-        'color_link_hover_color' => '',
-        'border_color' => '',
+        'background_color'              => '',
+        'page_background_color'         => '',
+        'menu_hover_color'              => '',
+        'submenu_hover_color'           => '',
+        'link_color'                    => '',
+        'main_text_color'               => '',
+        'secondary_text_color'          => '',
+        'navigation_text_color'         => '',
+        'navigation_text_hover_color'   => '',
+        'header_textcolor'              => '',
+        'color_link_hover_color'        => '',
+        'border_color'                  => '',
     ));
 
     return <<<CSS
@@ -578,7 +575,6 @@ function elegance_get_color_scheme_css($colors)
 	li.comment .children > li::before {
 	    border-left-color: {$colors['main_text_color']};
 	}
-
 
 	/* Link Color */
 	button,
@@ -711,7 +707,6 @@ function elegance_get_color_scheme_css($colors)
 	  color: {$colors['secondary_text_color']} !important;
 	}
 
-
 	/* Border Color */
 	fieldset,
 	pre,
@@ -811,18 +806,18 @@ CSS;
 function elegance_color_scheme_css_template()
 {
     $colors = array(
-        'background_color' => '{{ data.background_color }}',
-        'page_background_color' => '{{ data.page_background_color }}',
-        'menu_hover_color' => '{{ data.menu_hover_color }}',
-        'submenu_hover_color' => '{{ data.submenu_hover_color }}',
-        'link_color' => '{{ data.link_color }}',
-        'main_text_color' => '{{ data.main_text_color }}',
-        'secondary_text_color' => '{{ data.secondary_text_color }}',
-        'navigation_text_color' => '{{ data.navigation_text_color }}',
-        'navigation_text_hover_color' => '{{ data.navigation_text_hover_color }}',
-        'header_textcolor' => '{{ data.header_textcolor }}',
-        'color_link_hover_color' => '{{ data.color_link_hover_color }}',
-        'border_color' => '{{ data.border_color }}',
+        'background_color'              => '{{ data.background_color }}',
+        'page_background_color'         => '{{ data.page_background_color }}',
+        'menu_hover_color'              => '{{ data.menu_hover_color }}',
+        'submenu_hover_color'           => '{{ data.submenu_hover_color }}',
+        'link_color'                    => '{{ data.link_color }}',
+        'main_text_color'               => '{{ data.main_text_color }}',
+        'secondary_text_color'          => '{{ data.secondary_text_color }}',
+        'navigation_text_color'         => '{{ data.navigation_text_color }}',
+        'navigation_text_hover_color'   => '{{ data.navigation_text_hover_color }}',
+        'header_textcolor'              => '{{ data.header_textcolor }}',
+        'color_link_hover_color'        => '{{ data.color_link_hover_color }}',
+        'border_color'                  => '{{ data.border_color }}',
     );
     ?>
     <script type="text/html" id="tmpl-elegance-color-scheme">
@@ -1110,12 +1105,6 @@ function elegance_link_color_css()
             }
         }
 
-		/*@media screen and (min-width: 56.875em) {
-			.main-navigation li:hover > a,
-			.main-navigation li.focus > a {
-				color: %1$s;
-			}
-		}*/
 	';
 
     wp_add_inline_style('elegance-style', sprintf($css, $link_color, $link_hover_color));
