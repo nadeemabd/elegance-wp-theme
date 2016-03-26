@@ -6,7 +6,7 @@
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
-	display: block;
+	display: flex;
 }
 
 .site-main {
